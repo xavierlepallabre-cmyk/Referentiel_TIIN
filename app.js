@@ -644,7 +644,7 @@ $('#fichier-import').addEventListener('change', async e => {
   if (m) chargerSeance({ titre: br?.titre || '', date: aujourdhui(), taches: m[1].split(',') });
   else if (br) chargerSeance(br);
   else chargerSeance({ titre: '', date: aujourdhui(), taches: [] });
-  rendreSavoirs(); rendreFiches(); rendreMatrices();
+  rendreSavoirs(); rendreFiches(); rendreMatrices(); rendreChoixCibles();
   if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(() => {});
 })();
 })();
