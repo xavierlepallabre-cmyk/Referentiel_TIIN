@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#16324f">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 <header class="barre">
@@ -22,6 +22,7 @@
   <nav class="onglets" role="tablist">
     <button role="tab" data-vue="seance" aria-selected="true">Séance atelier</button>
     <button role="tab" data-vue="cibler">Cibler</button>
+    <button role="tab" data-vue="tp">Idées de TP</button>
     <button role="tab" data-vue="savoirs">Savoirs</button>
     <button role="tab" data-vue="fiches">Tâches &amp; compétences</button>
     <button role="tab" data-vue="matrices">Matrices</button>
@@ -104,6 +105,21 @@
       </div>
       <ol id="liste-cibler" class="classement"></ol>
     </section>
+    <section id="bloc-cibler-tp" class="panneau" hidden>
+      <div class="panneau-tete"><h2>Idées de TP qui travaillent ces compétences</h2></div>
+      <div id="liste-cibler-tp"></div>
+    </section>
+  </section>
+
+  <!-- ======================= IDÉES DE TP ======================= -->
+  <section id="vue-tp" class="vue">
+    <p id="tp-intro" class="avertissement"></p>
+    <div class="outils">
+      <input id="recherche-tp" type="search" placeholder="Rechercher un TP (ex. : sas, vanne, déchets, levage…)">
+      <select id="filtre-tp-cp"><option value="">Toutes les compétences</option></select>
+      <select id="filtre-tp-act"><option value="">Toutes les activités</option></select>
+    </div>
+    <div id="liste-tp"></div>
   </section>
 
   <!-- ======================= SAVOIRS ======================= -->
@@ -169,7 +185,7 @@
 <!-- Vue imprimable de la séance -->
 <div id="impression" aria-hidden="true"></div>
 
-<script src="data/referentiel.js?v=3"></script>
-<script src="app.js?v=3"></script>
+<script src="data/referentiel.js?v=4"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>

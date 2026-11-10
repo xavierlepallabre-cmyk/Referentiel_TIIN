@@ -9,6 +9,7 @@ référentiel du **Bac Pro Techniques d'Interventions sur Installations Nucléai
 |---|---|
 | **Séance atelier** | Cocher les tâches réalisées pendant une activité → compétences mobilisées classées de la plus liée à la moins liée (indicateurs de performance, données), puis savoirs associés classés, dépliables jusqu'au détail avec niveaux taxonomiques. Copier le résumé, imprimer / PDF, enregistrer la séance. Le lien de la page contient les tâches cochées (`#t=T2.3,T6.3`) : on peut le partager. |
 | **Cibler** | Choisir une ou plusieurs compétences peu travaillées → tâches qui les mobilisent, classées (nombre de compétences ciblées couvertes, puis tâches les moins pratiquées d'abord), avec indicateurs à observer et données à prévoir. Bouton « Proposer les moins travaillées » (d'après les séances enregistrées) et préparation directe d'une séance. |
+| **Idées de TP** | 21 TP faisables en atelier de maintenance de LP avec simulation radiologique (préparation d'intervention, sas, cartographie, décontamination, protections biologiques, vanne, moto-pompe, déchets, démantèlement, levage, incident, REX…). Chaque TP : contexte, durée, matériel, déroulé, observables, variantes, sécurité, tâches liées. Les 38 tâches sont couvertes. Filtre par compétence / activité, chargement direct dans la séance. Les TP apparaissent aussi dans « Cibler » et dans les fiches tâches. Source éditable : `tools/tp_source.py`. |
 | **Savoirs** | S1 à S8 en entier, chaque sous-savoir avec son niveau (N1 à N4), filtre par niveau, recherche sans accents, définition des niveaux. |
 | **Tâches & compétences** | Fiches détaillées : tâches (données / compétences / indicateurs), compétences (tâches et savoirs liés), activités (conditions de réalisation, résultats attendus). |
 | **Matrices** | Tâches × compétences et compétences × savoirs, cliquables. |
@@ -25,6 +26,7 @@ référentiel du **Bac Pro Techniques d'Interventions sur Installations Nucléai
 * `data/activites_competences.json` : 6 activités, 38 tâches, 15 compétences, liens et indicateurs.
 * `data/savoirs.json` : définitions des niveaux, savoirs S1-S7 en arbre (niveau par élément), S8 en
   tableau capacités / connaissances / exemples (le référentiel n'y donne pas de colonne de niveaux).
+* `data/tp.json` : banque d'idées de TP (générée par `python3 tools/tp_source.py`).
 * `data/referentiel.js` : **généré** à partir des deux JSON — après toute correction :
 
 ```bash

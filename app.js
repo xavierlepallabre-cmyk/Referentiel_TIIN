@@ -403,6 +403,7 @@ function ficheTache(t) {
         <td data-col="Données">${commun ? '<span class="aide">Descriptif commun à 7 tâches (voir la fiche CP4.5)</span>' : ul(tc.donnees)}</td>
         <td data-col="Indicateurs de performance">${commun ? '<span class="aide">Voir la fiche CP4.5</span>' : ul(tc.indicateurs)}</td></tr>`;
     }).join('')}</tbody></table>
+    ${(() => { const l = TPS.filter(tp => tp.taches.includes(t.id)); return l.length ? `<p class="aide">Idées de TP : ${l.map(tp => `<span class="puce lien" data-aller="tp:${tp.id}" title="${esc(tp.titre)}">${tp.id}</span>`).join(' ')}</p>` : ''; })()}
     <p class="aide">Ajouter à la séance : <button class="discret" data-ajout="${t.id}">${etat.coches.has(t.id) ? '✓ déjà cochée' : '+ cocher cette tâche'}</button></p>
   </article>`;
 }
@@ -453,6 +454,12 @@ function aller(cible) {
     const d = $('#dom-' + id); d.open = true; setTimeout(() => d.scrollIntoView({ behavior: 'smooth' }), 30);
     return;
   }
+  if (type === 'tp') {
+    ouvrirVue('tp'); $('#recherche-tp').value = ''; $('#filtre-tp-cp').value = ''; $('#filtre-tp-act').value = ''; rendreTP();
+    const el = $('#fiche-' + id); el.open = true;
+    setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 30); el.classList.add('surligne'); setTimeout(() => el.classList.remove('surligne'), 1800);
+    return;
+  }
   ouvrirVue('fiches');
   etat.fiche = type === 'tache' ? 'taches' : type === 'cp' ? 'competences' : 'activites';
   $$('.bascule button').forEach(x => x.classList.toggle('actif', x.dataset.fiche === etat.fiche));
@@ -487,6 +494,70 @@ function rendreMatrices() {
   $('#matrice-cs').innerHTML = g + '</tbody>';
 }
 
+/* ============================================================ IDÉES DE TP */
+const TPS = R.tp.tp;
+const cpsDuTP = tp => [...new Set(tp.taches.flatMap(t => TACHES.get(t).competences.map(x => x.cp)))].sort(triCode);
+const puceTache = t => `<span class="puce lien" data-aller="tache:${t}" title="${esc(TACHES.get(t).titre)}">${t}</span>`;
+
+function carteTP(tp, ouvert = false, cibles = null) {
+  const cps = cpsDuTP(tp);
+  const li = a => a.map(x => `<li>${esc(x)}</li>`).join('');
+  return `<details class="tp fiche panneau" id="fiche-${tp.id}" ${ouvert ? 'open' : ''}>
+    <summary>
+      <div class="entete-fiche"><span class="code">${tp.id}</span><h3>${esc(tp.titre)}</h3><span class="meta">${esc(tp.duree)} · ${esc(tp.effectif)}</span></div>
+      <div class="contexte">${esc(tp.contexte)}</div>
+      <div class="liens"><span class="aide">Tâches :</span>${tp.taches.map(puceTache).join('')}</div>
+      <div class="liens"><span class="aide">Compétences :</span>${cps.map(c => `<span class="puce ${cibles && cibles.has(c) ? 'cible-ok' : ''}" title="${esc(COMPS.get(c).libelle)}">${c}</span>`).join('')}</div>
+      <div class="tp-actions"><button class="primaire mini" data-tp-seance="${tp.id}">Charger ses tâches dans la séance</button><span class="plus">Voir le déroulé ▾</span></div>
+    </summary>
+    <div class="tp-corps">
+      <div><h4>Matériel</h4><ul>${li(tp.materiel)}</ul></div>
+      <div><h4>Ce qu'on observe / évalue</h4><ul>${li(tp.observables)}</ul></div>
+      <div class="large"><h4>Déroulé</h4><ol>${li(tp.deroule)}</ol></div>
+      <div><h4>Variantes</h4><ul>${li(tp.variantes)}</ul></div>
+      <div><h4>Sécurité</h4><p style="margin:0">${esc(tp.securite)}</p></div>
+    </div>
+  </details>`;
+}
+
+function rendreTP() {
+  const motifs = norm($('#recherche-tp').value.trim()).split(/\s+/).filter(Boolean);
+  const cp = $('#filtre-tp-cp').value, act = $('#filtre-tp-act').value;
+  const liste = TPS.filter(tp =>
+    (!motifs.length || motifs.every(m => norm(JSON.stringify(tp)).includes(m))) &&
+    (!cp || cpsDuTP(tp).includes(cp)) &&
+    (!act || tp.taches.some(t => TACHES.get(t).activite === act)));
+  $('#liste-tp').innerHTML = liste.map(tp => carteTP(tp, false, cp ? new Set([cp]) : null)).join('') || '<p class="vide">Aucun TP ne correspond.</p>';
+}
+$('#tp-intro').textContent = R.tp.intro + ' Chaque TP est relié aux tâches du référentiel : les compétences et savoirs en découlent.';
+$('#filtre-tp-cp').innerHTML += R.competences.map(c => `<option value="${c.id}">${c.id} — ${esc(c.libelle)}</option>`).join('');
+$('#filtre-tp-act').innerHTML += R.activites.map(a => `<option value="${a.id}">${a.id} — ${esc(a.titre)}</option>`).join('');
+['#recherche-tp', '#filtre-tp-cp', '#filtre-tp-act'].forEach(s => $(s).addEventListener('input', rendreTP));
+
+function chargerTP(id) {
+  const tp = TPS.find(x => x.id === id);
+  if (etat.coches.size && !confirm('Remplacer les tâches actuellement cochées dans la séance atelier ?')) return;
+  chargerSeance({ titre: `${tp.id} · ${tp.titre}`, date: aujourdhui(), taches: tp.taches });
+  ouvrirVue('seance'); toast('Tâches du TP chargées : ajustez si besoin puis enregistrez.');
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-tp-seance]'); if (!b) return;
+  e.preventDefault(); chargerTP(b.dataset.tpSeance);
+});
+
+function rendreCiblerTP(cibles) {
+  const set = new Set(cibles);
+  const props = TPS.map(tp => ({ tp, n: cpsDuTP(tp).filter(c => set.has(c)).length })).filter(x => x.n)
+    .sort((a, b) => b.n - a.n || triCode(a.tp.id, b.tp.id));
+  $('#bloc-cibler-tp').hidden = !cibles.length;
+  $('#liste-cibler-tp').innerHTML = props.length ? props.map(({ tp, n }) => `<div class="tp-mini">
+      <div><b style="color:var(--accent-2)">${tp.id}</b> ${esc(tp.titre)} <span class="aide">· ${esc(tp.duree)}</span><br>
+      <span class="liens" style="display:inline-flex;gap:4px;flex-wrap:wrap">${cpsDuTP(tp).filter(c => set.has(c)).map(c => `<span class="puce cible-ok">${c}</span>`).join('')}</span></div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end"><span class="aide">${n}/${cibles.length}</span>
+      <button class="mini" data-aller="tp:${tp.id}">Voir</button><button class="mini" data-tp-seance="${tp.id}">Charger</button></div></div>`).join('')
+    : '<p class="aide">Aucun TP de la banque ne mobilise ces compétences.</p>';
+}
+
 /* ================================================================ CIBLER */
 function comptages() {
   const seances = lire(CLE_SEANCES, []);
@@ -516,6 +587,7 @@ function rendreCibler() {
   const cibles = [...etat.cibles].sort(triCode);
   $('#vide-cibler').hidden = cibles.length > 0;
   $('#bloc-cibler').hidden = cibles.length === 0;
+  rendreCiblerTP(cibles);
   if (!cibles.length) return;
   const { nT, nb } = comptages();
   const props = R.taches.map(t => {
@@ -644,7 +716,7 @@ $('#fichier-import').addEventListener('change', async e => {
   if (m) chargerSeance({ titre: br?.titre || '', date: aujourdhui(), taches: m[1].split(',') });
   else if (br) chargerSeance(br);
   else chargerSeance({ titre: '', date: aujourdhui(), taches: [] });
-  rendreSavoirs(); rendreFiches(); rendreMatrices(); rendreChoixCibles();
+  rendreSavoirs(); rendreFiches(); rendreMatrices(); rendreChoixCibles(); rendreTP();
   if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(() => {});
 })();
 })();

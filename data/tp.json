@@ -1,0 +1,789 @@
+{
+ "intro": "Idées de TP pour un atelier de maintenance de lycée professionnel équipé d'un matériel de simulation radiologique. Les sources et contaminations sont toujours simulées.",
+ "tp": [
+  {
+   "id": "TP01",
+   "titre": "Préparer une intervention en zone contrôlée simulée",
+   "contexte": "Le chef d'équipe confie au binôme le dossier d'intervention pour le remplacement d'un clapet sur une ligne située en zone contrôlée (zone délimitée et balisée dans l'atelier). Avant d'entrer, il faut s'approprier le dossier, repérer les risques et préparer le matériel.",
+   "duree": "3 h",
+   "effectif": "binômes",
+   "materiel": [
+    "Dossier d'intervention fictif : ordre de travail, plan de site, cartographie radiologique, plan de prévention, analyse de risques, prévisionnel dosimétrique",
+    "Plan de l'atelier avec zonage (balisage, panneaux trèfle)",
+    "Liste du matériel et outillage, magasin de l'atelier",
+    "Fiche de préparation vierge"
+   ],
+   "deroule": [
+    "Lecture guidée du dossier : identifier l'intervention, le lieu, les contraintes (zonage, débit de dose, durée)",
+    "Repérer sur le plan le cheminement d'accès et les zones à risque ; relever les interfaces (énergies, utilités)",
+    "Lister les risques classiques et radiologiques et les parades prévues au plan de prévention",
+    "Calculer la dose prévisionnelle (débit de dose × temps) et la comparer à l'objectif",
+    "Établir la liste du matériel, outillage et EPI, vérifier leur disponibilité au magasin",
+    "Restitution orale au chef d'équipe (l'enseignant) : ce qu'on va faire, comment, quels risques"
+   ],
+   "taches": [
+    "T1.1",
+    "T1.5",
+    "T1.4",
+    "T6.1",
+    "T2.4",
+    "T2.1"
+   ],
+   "observables": [
+    "Le dossier est identifié et compris (questions de compréhension)",
+    "Le cheminement et la zone de travail sont repérés sans erreur",
+    "Les risques et les parades sont correctement listés",
+    "Le calcul de dose prévisionnelle est juste et comparé à la valeur cible",
+    "La liste matériel est complète et réaliste"
+   ],
+   "variantes": [
+    "Introduire volontairement une incohérence dans le dossier (cartographie périmée) à faire remonter",
+    "Version courte en 1re année : dossier pré-rempli, questionnaire guidé"
+   ],
+   "securite": "Aucune source réelle : débits de dose fictifs portés sur la cartographie."
+  },
+  {
+   "id": "TP02",
+   "titre": "Accès en zone : habillage, déshabillage et franchissement de zone",
+   "contexte": "Avant toute intervention en zone contrôlée, l'intervenant doit s'équiper selon le niveau de zone et ressortir sans propager de contamination.",
+   "duree": "2 h",
+   "effectif": "groupe, passage individuel",
+   "materiel": [
+    "Sas d'accès matérialisé (zone propre / zone à risque de contamination, ligne de saut de zone)",
+    "Tenues : combinaison, surbottes, gants (double paire), coiffe ; tenue vinyle si disponible",
+    "Dosimètres opérationnels simulés et dosimètre passif factice",
+    "Traceur fluorescent ou poudre UV et lampe UV pour simuler la contamination",
+    "Affichage des règles d'habillage / déshabillage"
+   ],
+   "deroule": [
+    "Rappel des règles d'accès et du rôle des tenues selon le zonage",
+    "Habillage chronométré dans l'ordre prescrit, contrôle croisé par le binôme",
+    "Activité courte en zone avec manipulation d'objets « contaminés » (traceur)",
+    "Déshabillage avec saut de zone ; contrôle à la lampe UV de la peau et des vêtements personnels",
+    "Analyse des traces de contamination trouvées et des fautes de gestuelle"
+   ],
+   "taches": [
+    "T5.3",
+    "T1.5",
+    "T5.4",
+    "T1.4"
+   ],
+   "observables": [
+    "Ordre d'habillage et de déshabillage respecté",
+    "Aucune trace de traceur après sortie (ou écart identifié et expliqué)",
+    "Le dosimètre est porté et relevé à l'entrée et à la sortie",
+    "L'élève rappelle les consignes à son binôme en cas d'écart"
+   ],
+   "variantes": [
+    "Concours inter-binômes : zéro trace UV",
+    "Ajouter un dosimètre qui « sonne » pour travailler la conduite à tenir"
+   ],
+   "securite": "Traceur non toxique ; contrôler les allergies au latex."
+  },
+  {
+   "id": "TP03",
+   "titre": "Monter un sas de confinement et sa ventilation",
+   "contexte": "Pour ouvrir un circuit potentiellement contaminé, on construit un sas vinyle maintenu en dépression par un extracteur filtrant.",
+   "duree": "4 h",
+   "effectif": "équipes de 3",
+   "materiel": [
+    "Structure de sas (tubes, raccords) et vinyle, ruban adhésif, manchettes",
+    "Extracteur / aspirateur avec filtre (THE si disponible) et gaine",
+    "Manomètre différentiel ou indicateur de dépression (fumigène froid, ruban)",
+    "Fiche de contrôle du confinement"
+   ],
+   "deroule": [
+    "Étude de la demande : dimensions, accès, point d'extraction",
+    "Contrôle du matériel avant montage (état du vinyle, fonctionnement de l'extracteur)",
+    "Montage du sas suivant la gamme ; mise en place de l'extraction",
+    "Contrôle de la dépression et de l'étanchéité (fumigène, mesure)",
+    "Relevé des écarts et corrections ; contrôle final par l'enseignant",
+    "Démontage en « repliant » le vinyle côté intérieur et conditionnement en déchets"
+   ],
+   "taches": [
+    "T2.3",
+    "T2.1",
+    "T2.2",
+    "T1.11",
+    "T1.14",
+    "T3.1"
+   ],
+   "observables": [
+    "Matériel vérifié avant usage",
+    "Sas étanche, dépression mesurée et conforme",
+    "Écarts mesurés et consignés",
+    "Démontage sans dispersion (règle du « repli »)"
+   ],
+   "variantes": [
+    "Sas sur une vanne réelle de l'atelier pour enchaîner avec le TP08",
+    "Panne d'extracteur introduite en cours de TP"
+   ],
+   "securite": "Travail en hauteur limité (escabeau conforme) ; outils de coupe pour le vinyle."
+  },
+  {
+   "id": "TP04",
+   "titre": "Réaliser une cartographie radiologique d'un local",
+   "contexte": "Avant un chantier, le local doit être cartographié : mesures de débit de dose en différents points, report sur plan, identification des points chauds.",
+   "duree": "3 h",
+   "effectif": "binômes",
+   "materiel": [
+    "Simulateur de débit de dose (radiamètre de simulation et sources simulées, ou balises émettrices)",
+    "Plan du local quadrillé",
+    "Fiche de relevés, document de contrôle de l'appareil (date d'étalonnage, test de fonctionnement)",
+    "Panneaux de balisage"
+   ],
+   "deroule": [
+    "Vérifier l'appareil : état, validité de l'étalonnage, test de fonctionnement, bruit de fond",
+    "Définir les points de mesure sur le plan",
+    "Réaliser les mesures (au contact et à 1 m si le simulateur le permet)",
+    "Reporter les valeurs sur le plan, repérer les points chauds",
+    "Proposer le zonage / balisage correspondant et le mettre en place",
+    "Rendre compte : fiche de traçabilité renseignée"
+   ],
+   "taches": [
+    "T5.2",
+    "T1.15",
+    "T1.6",
+    "T1.16",
+    "T1.10",
+    "T1.14"
+   ],
+   "observables": [
+    "Contrôle préalable de l'appareil effectué et tracé",
+    "Mesures cohérentes et correctement reportées (unités)",
+    "Points chauds identifiés et balisage adapté",
+    "Fiche de traçabilité complète"
+   ],
+   "variantes": [
+    "Appareil volontairement « hors validité » à détecter",
+    "Comparer deux binômes : écarts de mesure et causes"
+   ],
+   "securite": "Uniquement des sources simulées."
+  },
+  {
+   "id": "TP05",
+   "titre": "Contrôle de non-contamination du matériel en sortie de zone",
+   "contexte": "Les outils et pièces sortis de zone contrôlée doivent être contrôlés. Un objet contaminé ne sort pas : il est décontaminé ou traité en déchet.",
+   "duree": "2 h",
+   "effectif": "binômes",
+   "materiel": [
+    "Lot d'outils et de pièces, certains marqués au traceur fluorescent (contamination simulée)",
+    "Lampe UV et/ou contaminamètre de simulation",
+    "Frottis (lingettes, papier filtre), sachets, étiquettes",
+    "Fiche de contrôle de sortie"
+   ],
+   "deroule": [
+    "Rappel : contamination fixée / non fixée, contrôle direct / indirect (frottis)",
+    "Contrôle de chaque objet selon la procédure",
+    "Trier : libérable / à décontaminer / déchet",
+    "Réaliser un frottis sur une surface et l'analyser (UV ou simulateur)",
+    "Renseigner la fiche et rendre compte des écarts"
+   ],
+   "taches": [
+    "T5.2",
+    "T2.5",
+    "T1.16",
+    "T1.14",
+    "T1.10"
+   ],
+   "observables": [
+    "Procédure de contrôle respectée sur chaque objet",
+    "Tri correct (aucun objet contaminé libéré)",
+    "Frottis correctement réalisé",
+    "Fiche renseignée"
+   ],
+   "variantes": [
+    "Introduire un objet contaminé à l'intérieur (cavité) : intérêt du frottis",
+    "Chronométrer et discuter l'optimisation"
+   ],
+   "securite": "Traceur non toxique."
+  },
+  {
+   "id": "TP06",
+   "titre": "Décontaminer un équipement",
+   "contexte": "Une pièce mécanique (carter, vanne) ressort contaminée : il faut la décontaminer en choisissant une méthode adaptée, puis contrôler le résultat.",
+   "duree": "3 h",
+   "effectif": "binômes",
+   "materiel": [
+    "Pièces marquées au traceur fluorescent (ou peinture lavable) pour simuler une contamination",
+    "Moyens : lingettes, solvant doux, brosses, gel ou mousse si disponible",
+    "Lampe UV / contaminamètre de simulation",
+    "Conteneurs de déchets, sacs, étiquettes"
+   ],
+   "deroule": [
+    "Contrôle initial et cartographie de la contamination sur la pièce",
+    "Choix argumenté de la méthode (manuelle, chimique, mécanique) selon la pièce",
+    "Décontamination en limitant la production de déchets",
+    "Contrôle après décontamination ; nouvelle passe si besoin",
+    "Tri et conditionnement des déchets produits",
+    "Bilan : temps, déchets, efficacité"
+   ],
+   "taches": [
+    "T2.5",
+    "T3.1",
+    "T1.13",
+    "T1.14",
+    "T1.9"
+   ],
+   "observables": [
+    "Méthode choisie et justifiée",
+    "Résultat contrôlé et conforme",
+    "Déchets triés et conditionnés",
+    "Bilan qui propose une optimisation"
+   ],
+   "variantes": [
+    "Comparer deux méthodes sur deux pièces identiques",
+    "Imposer un objectif de volume de déchets maximal"
+   ],
+   "securite": "EPI chimiques si solvant ; ventilation."
+  },
+  {
+   "id": "TP07",
+   "titre": "Mettre en place des protections biologiques (ALARA)",
+   "contexte": "Une intervention doit se faire près d'une source (simulée). On cherche à réduire la dose : temps, distance, écrans.",
+   "duree": "3 h",
+   "effectif": "binômes",
+   "materiel": [
+    "Simulateur de débit de dose et source simulée",
+    "Écrans factices (matelas, briques, plaques) aux caractéristiques d'atténuation données",
+    "Abaques ou tableau des épaisseurs de demi-atténuation",
+    "Fiche d'optimisation dosimétrique"
+   ],
+   "deroule": [
+    "Mesure du débit de dose au poste de travail sans protection",
+    "Calcul de la dose pour la durée prévue",
+    "Choix et calcul des écrans (épaisseur 1/2, 1/10) pour atteindre l'objectif",
+    "Mise en place des protections (manutention, stabilité) et nouvelle mesure",
+    "Comparaison prévu / mesuré, analyse des écarts",
+    "Proposition d'optimisation (distance, outillage, organisation)"
+   ],
+   "taches": [
+    "T5.5",
+    "T1.9",
+    "T5.2",
+    "T1.13",
+    "T1.14"
+   ],
+   "observables": [
+    "Mesures et calculs justes (unités, ordres de grandeur)",
+    "Protections posées de façon stable et sûre",
+    "Gain dosimétrique vérifié",
+    "Propositions ALARA pertinentes"
+   ],
+   "variantes": [
+    "Co-intervention maths-sciences : loi de l'inverse du carré de la distance, décroissance",
+    "Budget dose imposé à respecter"
+   ],
+   "securite": "Manutention des écrans : charges et postures."
+  },
+  {
+   "id": "TP08",
+   "titre": "Remplacer le joint ou le clapet d'une vanne en zone simulée",
+   "contexte": "Intervention de maintenance corrective sur une vanne de l'atelier, traitée comme si elle était en zone contrôlée : préparation, consignation, démontage, remplacement, essai, repli.",
+   "duree": "4 h",
+   "effectif": "binômes",
+   "materiel": [
+    "Vanne ou robinet industriel sur banc (ou circuit hydraulique / pneumatique de l'atelier)",
+    "Pièces de rechange (joint, clapet, presse-étoupe)",
+    "Outillage, clés dynamométriques",
+    "Gamme de démontage / remontage, fiche de consignation",
+    "Tenue et balisage de zone (comme TP02)"
+   ],
+   "deroule": [
+    "Préparation : gamme, pièces, outillage, analyse des risques",
+    "Consignation (isolement, purge, mise à zéro énergie) et vérification",
+    "Démontage avec repérage des pièces",
+    "Remplacement des composants, remontage au couple",
+    "Déconsignation, essai d'étanchéité et de fonctionnement",
+    "Repli : nettoyage, tri des déchets, traçabilité (compte rendu, OT soldé)"
+   ],
+   "taches": [
+    "T6.3",
+    "T6.1",
+    "T1.8",
+    "T1.10",
+    "T1.11",
+    "T3.1"
+   ],
+   "observables": [
+    "Consignation correcte et vérifiée",
+    "Démontage sans détérioration, pièces repérées",
+    "Remontage conforme (couples, sens), essai réussi",
+    "Zone rendue propre, déchets triés",
+    "OT et traçabilité renseignés"
+   ],
+   "variantes": [
+    "Panne à diagnostiquer avant intervention",
+    "Contrainte de temps de séjour (dose) à respecter"
+   ],
+   "securite": "Consignation des énergies ; fluide sous pression."
+  },
+  {
+   "id": "TP09",
+   "titre": "Remplacer un composant lourd : moto-pompe ou motoréducteur",
+   "contexte": "Échange standard d'un ensemble moto-pompe : dépose, levage, remplacement, alignement, remise en service.",
+   "duree": "6 h (2 séances)",
+   "effectif": "équipes de 3",
+   "materiel": [
+    "Banc moto-pompe ou motoréducteur de l'atelier",
+    "Palan, élingues, manilles, chariot",
+    "Outillage d'alignement (règle, comparateurs, ou laser si disponible)",
+    "Dossier technique, gamme"
+   ],
+   "deroule": [
+    "Préparation et consignation électrique et mécanique",
+    "Plan de levage : masse, centre de gravité, élingage, cheminement",
+    "Dépose de l'ensemble et déplacement",
+    "Repose, alignement de l'accouplement, serrage",
+    "Déconsignation, essais (sens de rotation, vibrations, débit)",
+    "Compte rendu et respect des délais annoncés"
+   ],
+   "taches": [
+    "T6.3",
+    "T4.2",
+    "T2.6",
+    "T1.12",
+    "T1.8"
+   ],
+   "observables": [
+    "Plan de levage correct et respecté",
+    "Alignement dans les tolérances",
+    "Essais conformes",
+    "Délai annoncé respecté ou écart expliqué"
+   ],
+   "variantes": [
+    "Habilitation électrique : consignation par l'élève habilité (BS / B1V)",
+    "Travail en tenue (gêne, temps de séjour)"
+   ],
+   "securite": "Levage : zone balisée, personne sous charge interdite ; consignation électrique."
+  },
+  {
+   "id": "TP10",
+   "titre": "Réaliser une gamme de maintenance préventive",
+   "contexte": "Le plan de maintenance prévoit une visite préventive systématique d'un équipement (convoyeur, pompe, compresseur).",
+   "duree": "3 h",
+   "effectif": "binômes",
+   "materiel": [
+    "Équipement de l'atelier",
+    "Gamme de maintenance préventive",
+    "Lubrifiants, outillage, clé dynamométrique",
+    "GMAO ou fiche papier d'historique"
+   ],
+   "deroule": [
+    "Lecture de la gamme et du planning ; préparation",
+    "Réalisation des opérations : graissage, contrôle de serrages, tension de courroie, niveaux",
+    "Relevés et comparaison aux valeurs nominales",
+    "Signalement des anomalies (demande d'intervention)",
+    "Saisie dans la GMAO, temps passés, pièces consommées"
+   ],
+   "taches": [
+    "T6.5",
+    "T6.4",
+    "T2.7",
+    "T1.10",
+    "T1.12"
+   ],
+   "observables": [
+    "Toutes les opérations réalisées conformément à la gamme",
+    "Relevés justes et exploités",
+    "Anomalies signalées",
+    "Historique renseigné, temps et coûts suivis"
+   ],
+   "variantes": [
+    "Comparer temps prévu / temps réel et proposer une amélioration de gamme"
+   ],
+   "securite": "Consignation avant intervention sur organes mobiles."
+  },
+  {
+   "id": "TP11",
+   "titre": "Ronde de surveillance et relevé d'écarts",
+   "contexte": "Une ronde sur l'installation (ensemble des équipements de l'atelier) permet de détecter les dérives avant la panne.",
+   "duree": "2 h",
+   "effectif": "binômes",
+   "materiel": [
+    "Fiche de ronde avec valeurs nominales et seuils",
+    "Thermomètre infrarouge, sonomètre, vibromètre (stylo vibration), manomètres",
+    "Équipements en fonctionnement, dont un avec dérive provoquée (échauffement, fuite, bruit)"
+   ],
+   "deroule": [
+    "Préparation de la ronde : parcours, points de mesure, appareils",
+    "Réalisation des relevés sur chaque équipement",
+    "Comparaison aux seuils, interprétation",
+    "Rédaction d'une fiche d'écart et information de la hiérarchie",
+    "Proposition de correction à faire valider"
+   ],
+   "taches": [
+    "T6.4",
+    "T1.6",
+    "T1.14",
+    "T2.8",
+    "T1.2"
+   ],
+   "observables": [
+    "Relevés complets et justes",
+    "Dérive détectée et interprétée",
+    "Fiche d'écart claire, hiérarchie informée",
+    "Correction proposée et argumentée"
+   ],
+   "variantes": [
+    "Ajouter un relevé radiologique (débit de dose simulé) à la ronde"
+   ],
+   "securite": "Ne pas intervenir sur machine en marche ; protections en place."
+  },
+  {
+   "id": "TP12",
+   "titre": "Trier et conditionner les déchets d'un chantier",
+   "contexte": "Fin de chantier en zone : les déchets produits doivent être triés selon le zonage déchets, conditionnés, étiquetés et évacués avec leur traçabilité.",
+   "duree": "2 h",
+   "effectif": "binômes",
+   "materiel": [
+    "Lot de « déchets » de chantier : vinyle, gants, chiffons, pièces métalliques, liquides simulés",
+    "Conteneurs (fûts, sacs, bidons) aux codes couleur, étiquettes",
+    "Plan de zonage déchets de l'atelier",
+    "Fiches de suivi déchets"
+   ],
+   "deroule": [
+    "Rappel : zonage déchets, catégories (conventionnels, nucléaires, TFA…)",
+    "Tri des déchets selon leur provenance et nature",
+    "Conditionnement (compatibilité, remplissage, fermeture)",
+    "Étiquetage et identification des colis",
+    "Renseignement des fiches de suivi ; évacuation vers l'aire d'entreposage"
+   ],
+   "taches": [
+    "T3.1",
+    "T1.16",
+    "T2.4",
+    "T1.10"
+   ],
+   "observables": [
+    "Tri sans erreur de catégorie",
+    "Conditionnement adapté (liquides / solides)",
+    "Étiquettes et fiches complètes et cohérentes",
+    "Volume de déchets optimisé"
+   ],
+   "variantes": [
+    "Erreurs de tri glissées dans un colis existant à détecter"
+   ],
+   "securite": "Objets coupants : gants adaptés."
+  },
+  {
+   "id": "TP13",
+   "titre": "Conduire une installation automatisée de traitement de déchets",
+   "contexte": "Un système automatisé de l'atelier (convoyeur de tri, presse, poste de conditionnement) joue le rôle d'une installation de compactage ou de conditionnement de déchets.",
+   "duree": "3 h",
+   "effectif": "binômes",
+   "materiel": [
+    "Système automatisé de l'atelier (tri, transfert, presse pneumatique…)",
+    "Dossier de conduite : procédure de démarrage / arrêt, modes de marche",
+    "Charges à traiter (colis factices)",
+    "Moyen de manutention associé"
+   ],
+   "deroule": [
+    "Vérifications avant démarrage (sécurités, énergies, état)",
+    "Démarrage selon la procédure, conduite en mode normal",
+    "Traitement d'un lot de colis ; relevé de production",
+    "Gestion d'un arrêt (normal, puis arrêt d'urgence simulé) et redémarrage",
+    "Mise en sécurité et compte rendu de poste"
+   ],
+   "taches": [
+    "T3.2",
+    "T2.2",
+    "T1.6",
+    "T1.10"
+   ],
+   "observables": [
+    "Procédure de démarrage et d'arrêt respectée",
+    "Fonctionnement contrôlé par rapport aux paramètres nominaux",
+    "Réaction adaptée à l'arrêt d'urgence",
+    "Compte rendu de poste complet"
+   ],
+   "variantes": [
+    "Défaut capteur provoqué : diagnostic de premier niveau"
+   ],
+   "securite": "Respect des protecteurs ; arrêt d'urgence testé."
+  },
+  {
+   "id": "TP14",
+   "titre": "Découpe d'une structure en démantèlement simulé",
+   "contexte": "Démantèlement d'une tuyauterie ou d'un châssis métallique en zone : découpe à froid sous confinement, en maîtrisant la production de déchets.",
+   "duree": "4 h",
+   "effectif": "équipes de 3",
+   "materiel": [
+    "Tuyauteries ou profilés de récupération",
+    "Scie sabre, scie à ruban portative, coupe-tube (découpe à froid)",
+    "Sas ou confinement (TP03), aspiration",
+    "Conteneurs de déchets ; marquage au traceur de la zone « contaminée »"
+   ],
+   "deroule": [
+    "Analyse du chantier : séquence de découpe, dimensions des tronçons selon les conteneurs",
+    "Vérification et mise en service de l'outillage",
+    "Découpe selon la séquence, maîtrise des copeaux",
+    "Contrôle des tronçons, conditionnement",
+    "Arrêt de l'outillage, nettoyage, bilan déchets"
+   ],
+   "taches": [
+    "T4.1",
+    "T2.3",
+    "T5.4",
+    "T3.1",
+    "T2.1"
+   ],
+   "observables": [
+    "Outillage démarré, conduit et arrêté selon le mode opératoire",
+    "Découpe sans dispersion hors confinement",
+    "Tronçons adaptés aux conteneurs",
+    "Consignes de sécurité appliquées et rappelées"
+   ],
+   "variantes": [
+    "Comparer découpe à froid de deux méthodes : temps, déchets, risques"
+   ],
+   "securite": "EPI (lunettes, gants anti-coupure, protection auditive) ; pas de découpe à chaud sans permis de feu."
+  },
+  {
+   "id": "TP15",
+   "titre": "Manutentionner et lever un colis ou un fût",
+   "contexte": "Déplacement d'un fût de déchets et d'un équipement vers une aire d'entreposage, avec moyens manuels et de levage.",
+   "duree": "2 h",
+   "effectif": "équipes de 3",
+   "materiel": [
+    "Fût lesté, colis, charge à élinguer",
+    "Diable porte-fût, transpalette, palan / potence",
+    "Élingues, manilles, abaque d'élingage",
+    "Plan de circulation de l'atelier"
+   ],
+   "deroule": [
+    "Évaluation de la charge : masse, centre de gravité, prises",
+    "Choix du moyen et vérification (état, CMU)",
+    "Élingage et levage, guidage, dépose",
+    "Manutention manuelle avec gestes et postures adaptés",
+    "Rangement, compte rendu"
+   ],
+   "taches": [
+    "T4.2",
+    "T2.6",
+    "T5.4"
+   ],
+   "observables": [
+    "Moyen adapté à la charge, vérifié avant usage",
+    "Élingage correct (angle, CMU)",
+    "Gestes et postures adaptés",
+    "Zone balisée, consignes respectées"
+   ],
+   "variantes": [
+    "Lien PRAP / gestes et postures"
+   ],
+   "securite": "Personne sous charge interdite ; chaussures de sécurité."
+  },
+  {
+   "id": "TP16",
+   "titre": "Gérer un incident en zone",
+   "contexte": "Pendant une intervention simulée, un incident survient : alarme du dosimètre, contamination d'un intervenant ou malaise. L'équipe doit réagir, se mettre en sécurité et rendre compte.",
+   "duree": "2 h",
+   "effectif": "équipes de 3-4",
+   "materiel": [
+    "Chantier école en cours (TP08 ou TP03)",
+    "Dosimètre ou simulateur déclenchant une alarme",
+    "Traceur pour une contamination de personne",
+    "Fiches réflexes, plan d'urgence interne fictif, moyens d'alerte"
+   ],
+   "deroule": [
+    "Briefing : rappel de la conduite à tenir",
+    "Déclenchement de l'incident par l'enseignant (non annoncé)",
+    "Réaction de l'équipe : arrêt du chantier, repli, mise en sécurité",
+    "Alerte et information de la hiérarchie",
+    "Conservation des éléments (relevés, pièces) et compte rendu d'incident",
+    "Débriefing à chaud"
+   ],
+   "taches": [
+    "T1.7",
+    "T5.1",
+    "T1.2",
+    "T5.4",
+    "T1.3"
+   ],
+   "observables": [
+    "Arrêt du chantier immédiat et justifié",
+    "Mise en sécurité et alerte conformes",
+    "Compte rendu factuel et complet",
+    "Éléments justificatifs conservés"
+   ],
+   "variantes": [
+    "L'enseignant joue un « client » mécontent après l'incident (remontée des remarques du client)"
+   ],
+   "securite": "Scénario annoncé en début de séance comme exercice."
+  },
+  {
+   "id": "TP17",
+   "titre": "Suivre son chantier et rendre compte",
+   "contexte": "Sur un chantier de plusieurs séances, l'élève tient le rôle de l'intervenant qui suit l'avancement, gère les aléas et rend compte au chef d'équipe et au client.",
+   "duree": "fil rouge sur 2-3 séances",
+   "effectif": "équipes",
+   "materiel": [
+    "Planning de chantier, indicateurs (avancement, délais, coûts, dose)",
+    "Modèles : fiche d'écart, compte rendu, fiche de remarques client",
+    "Un chantier support (TP08, TP09 ou TP14)"
+   ],
+   "deroule": [
+    "Début de séance : point avancement par rapport au planning",
+    "Relevé des aléas et des écarts en cours de séance",
+    "Fin de séance : compte rendu à l'enseignant (chef d'équipe)",
+    "Intervention d'un « client » qui formule des remarques à faire remonter",
+    "Proposition de correction ou d'amélioration"
+   ],
+   "taches": [
+    "T1.2",
+    "T1.3",
+    "T2.7",
+    "T2.8",
+    "T1.12",
+    "T6.2"
+   ],
+   "observables": [
+    "Planning tenu à jour, écarts identifiés",
+    "Comptes rendus clairs, factuels, au bon interlocuteur",
+    "Remarques client transmises fidèlement",
+    "Corrections proposées avec accord de la hiérarchie"
+   ],
+   "variantes": [
+    "Co-intervention français : compte rendu écrit et oral"
+   ],
+   "securite": "—"
+  },
+  {
+   "id": "TP18",
+   "titre": "Retour d'expérience et proposition d'amélioration",
+   "contexte": "Après un chantier école, l'équipe analyse ce qui s'est passé (vidéo, relevés de dose, temps, déchets) pour proposer des améliorations.",
+   "duree": "2 h",
+   "effectif": "équipes",
+   "materiel": [
+    "Vidéo ou photos du chantier, relevés dosimétriques simulés, temps, volume de déchets",
+    "Grille de REX",
+    "Support de présentation"
+   ],
+   "deroule": [
+    "Visionnage et repérage des temps morts, gestes inutiles, expositions évitables",
+    "Analyse des écarts par rapport aux objectifs (dose, délai, déchets, qualité)",
+    "Recherche de causes (5M / Ishikawa)",
+    "Propositions d'amélioration chiffrées",
+    "Présentation orale"
+   ],
+   "taches": [
+    "T1.9",
+    "T6.2",
+    "T1.13"
+   ],
+   "observables": [
+    "Écarts identifiés avec des données",
+    "Causes analysées avec méthode",
+    "Propositions réalistes et argumentées"
+   ],
+   "variantes": [
+    "Les propositions sont mises en œuvre lors du chantier suivant et le gain est mesuré"
+   ],
+   "securite": "—"
+  },
+  {
+   "id": "TP19",
+   "titre": "Suivi dosimétrique individuel",
+   "contexte": "Chaque intervenant suit sa dose : relevé du dosimètre opérationnel, comparaison au prévisionnel, réaction en cas de dépassement.",
+   "duree": "1 h 30 (adossé à un autre TP)",
+   "effectif": "individuel",
+   "materiel": [
+    "Dosimètres opérationnels simulés (ou simulateur de débit de dose et chronomètre)",
+    "Fiche de suivi dosimétrique individuel",
+    "Prévisionnel dosimétrique du chantier"
+   ],
+   "deroule": [
+    "Relevé à l'entrée en zone, réglage des seuils d'alarme",
+    "Relevé à la sortie, calcul de la dose reçue",
+    "Comparaison au prévisionnel et à l'objectif",
+    "Analyse d'un dépassement simulé : causes, information de la hiérarchie",
+    "Tenue du suivi sur plusieurs séances"
+   ],
+   "taches": [
+    "T1.4",
+    "T1.13",
+    "T1.10"
+   ],
+   "observables": [
+    "Relevés systématiques et justes",
+    "Comparaison au prévisionnel effectuée",
+    "Dépassement détecté et signalé"
+   ],
+   "variantes": [
+    "Graphique de suivi sur la période (co-intervention maths)"
+   ],
+   "securite": "Doses fictives."
+  },
+  {
+   "id": "TP20",
+   "titre": "Vérifier un appareil de mesure avant usage",
+   "contexte": "On n'utilise pas un appareil sans vérifier qu'il est valide et qu'il fonctionne : radiamètre, contaminamètre, mais aussi multimètre ou manomètre.",
+   "duree": "1 h 30",
+   "effectif": "binômes",
+   "materiel": [
+    "Appareils de simulation radiologique et appareils de l'atelier (multimètre, manomètre, clé dynamométrique)",
+    "Étiquettes et certificats d'étalonnage (certains périmés)",
+    "Source témoin simulée ou banc de contrôle",
+    "Fiche de vérification"
+   ],
+   "deroule": [
+    "Contrôle visuel et administratif : identification, validité d'étalonnage",
+    "Test de fonctionnement (piles, auto-test, source témoin, valeur connue)",
+    "Mesure du bruit de fond",
+    "Décision : apte / inapte, étiquetage, retour au magasin",
+    "Traçabilité"
+   ],
+   "taches": [
+    "T1.15",
+    "T2.2",
+    "T5.2"
+   ],
+   "observables": [
+    "Validité vérifiée sur chaque appareil",
+    "Test de fonctionnement réalisé",
+    "Appareil inapte détecté et écarté",
+    "Fiche renseignée"
+   ],
+   "variantes": [
+    "Lien avec les savoirs S3 (mesures) et S8 (détecteurs)"
+   ],
+   "securite": "—"
+  },
+  {
+   "id": "TP21",
+   "titre": "Logistique et approvisionnement du chantier",
+   "contexte": "Le chantier commence dans deux jours : il faut rassembler et vérifier tout le matériel, sortir les pièces du magasin et préparer l'aire de chantier.",
+   "duree": "2 h",
+   "effectif": "binômes",
+   "materiel": [
+    "Liste de matériel issue d'un dossier d'intervention",
+    "Magasin de l'atelier, bons de sortie, GMAO",
+    "Matériels à contrôler (dont un défectueux)"
+   ],
+   "deroule": [
+    "Analyse de la liste et des quantités",
+    "Recherche des références (catalogue, GMAO), bons de sortie",
+    "Contrôle de chaque matériel (état, fonctionnement, validité)",
+    "Préparation et étiquetage du lot pour le chantier",
+    "Signalement des manques ou défauts"
+   ],
+   "taches": [
+    "T2.4",
+    "T2.2",
+    "T2.1",
+    "T6.1"
+   ],
+   "observables": [
+    "Lot complet et conforme",
+    "Matériel défectueux détecté",
+    "Bons de sortie correctement rédigés",
+    "Manques signalés"
+   ],
+   "variantes": [
+    "Contrainte de délai ou de rupture de stock"
+   ],
+   "securite": "—"
+  }
+ ]
+}

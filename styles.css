@@ -275,3 +275,22 @@ mark { background: var(--jaune); color: #000; border-radius: 3px; padding: 0 1px
 
 button.mini { min-height: 28px; padding: 2px 10px; font-size: .8rem; }
 button:disabled { opacity: .55; cursor: default; }
+
+/* ---------- Idées de TP ---------- */
+select { font: inherit; color: inherit; border: 1px solid var(--bord); background: var(--surface); border-radius: 8px; padding: 8px 10px; min-height: 40px; max-width: 100%; }
+.tp > summary { list-style: none; cursor: pointer; }
+.tp > summary::-webkit-details-marker { display: none; }
+.tp .entete-fiche { margin-bottom: 4px; }
+.tp .contexte { margin: 4px 0 8px; }
+.tp .liens { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; margin-top: 4px; }
+.tp .liens .aide { margin-right: 4px; }
+.tp .plus { color: var(--accent-2); font-size: .85rem; font-weight: 600; align-self: center; }
+.tp[open] .plus { display: none; }
+.tp-corps { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; margin-top: 10px; font-size: .92rem; }
+.tp-corps h4 { margin: 10px 0 4px; font-size: .78rem; text-transform: uppercase; letter-spacing: .03em; color: var(--texte-2); }
+.tp-corps ul, .tp-corps ol { margin: 0; padding-left: 20px; }
+.tp-corps .large { grid-column: 1 / -1; }
+.tp-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; align-items: center; }
+.tp-mini { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--bord); }
+.tp-mini:first-child { border-top: 0; }
+@media (max-width: 700px) { .tp-corps { grid-template-columns: 1fr; } }
