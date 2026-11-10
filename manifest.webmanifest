@@ -1,0 +1,14 @@
+{
+  "name": "Référentiel Bac Pro TIIN",
+  "short_name": "Réf. TIIN",
+  "description": "Tâches réalisées en atelier → compétences et savoirs du référentiel Bac Pro TIIN",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f6f8",
+  "theme_color": "#16324f",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,3154 @@
+{
+ "source": "Référentiel Bac Pro TIIN (Techniques d'Interventions sur Installations Nucléaires)",
+ "autonomie": {
+  "1": "Exécute la tâche demandée en respectant la procédure prescrite ou les règles définies par l'entreprise ou le donneur d'ordre",
+  "2": "Prépare et/ou met en œuvre et/ou contrôle la tâche demandée sous la responsabilité de sa hiérarchie"
+ },
+ "activites": [
+  {
+   "id": "A1",
+   "titre": "Fiabiliser les interventions et communiquer",
+   "conditions": [
+    {
+     "t": "Toutes les pièces du dossier nécessaires à l’exécution de l’intervention et à la transcription du retour d'expérience de l’intervention",
+     "sub": []
+    },
+    {
+     "t": "Moyens de mesure radiologique disponibles et étalonnés",
+     "sub": []
+    },
+    {
+     "t": "Pièces nécessaires à la traçabilité des écarts, incidents, accidents disponibles",
+     "sub": []
+    },
+    {
+     "t": "Documents opérationnels du système qualité de l'entreprise (procédures, consignes, fiches d'écart et d'amélioration) disponibles.",
+     "sub": []
+    }
+   ],
+   "resultats": [
+    {
+     "t": "La maîtrise des éléments constitutifs du dossier est effective",
+     "sub": []
+    },
+    {
+     "t": "Les fiches d’écarts sont transmises et remplies",
+     "sub": []
+    },
+    {
+     "t": "La dosimétrie est conforme à l'étude préalable",
+     "sub": []
+    },
+    {
+     "t": "Les fiches de résultat ou d'écart, comptes rendus d'incident ou accident sont transmis et remplis",
+     "sub": []
+    },
+    {
+     "t": "La planification est respectée",
+     "sub": []
+    },
+    {
+     "t": "Les documents sont renseignés",
+     "sub": []
+    },
+    {
+     "t": "Les activités sont optimisées après intégration des contraintes",
+     "sub": []
+    },
+    {
+     "t": "La conformité au cahier des charges en regard des objectifs de production est assurée",
+     "sub": []
+    },
+    {
+     "t": "La conformité au « plan qualité particulier » défini pour l'intervention (plan contrôle qualité) est respectée",
+     "sub": []
+    },
+    {
+     "t": "L’intervention s’inscrit dans une démarche d’amélioration continue.",
+     "sub": []
+    }
+   ]
+  },
+  {
+   "id": "A2",
+   "titre": "Exécuter des opérations de logistique",
+   "conditions": [
+    {
+     "t": "Le dossier d’intervention",
+     "sub": [
+      "Cahier des charges",
+      "Plan de circulation",
+      "Plan de prévention",
+      "Analyse des risques liés à l’intervention et à la gestion des déchets",
+      "Évaluation dosimétrique prévisionnelle initiale individuelle",
+      "Organigramme de l’intervention",
+      "Planning de l’intervention",
+      "Modes opératoires",
+      "Plan de contrôle : Domaine sécurité et Radioprotection",
+      "Qualité, Fiche d’écart"
+     ]
+    },
+    {
+     "t": "Ressources techniques disponibles (matériels et moyens de sécurité et de contrôle) et équipements de protection individuelle (EPI)",
+     "sub": []
+    },
+    {
+     "t": "Consignes de sécurité radiologique et conventionnelle.",
+     "sub": []
+    }
+   ],
+   "resultats": [
+    {
+     "t": "La connaissance des tâches à effectuer est effective",
+     "sub": []
+    },
+    {
+     "t": "L’information de la hiérarchie de l’avancement du chantier est permanente",
+     "sub": []
+    },
+    {
+     "t": "La maîtrise des moyens d’information est effective",
+     "sub": []
+    },
+    {
+     "t": "La prise en compte de l’ensemble des risques professionnels et l’application du Plan de Prévention sont respectés",
+     "sub": []
+    },
+    {
+     "t": "Les consignes sont respectées",
+     "sub": []
+    },
+    {
+     "t": "Le traitement des aléas est effectif",
+     "sub": []
+    },
+    {
+     "t": "La mise en place des moyens de protections individuels est conforme",
+     "sub": []
+    },
+    {
+     "t": "La prise en compte des exigences du plan de prévention est effective",
+     "sub": []
+    },
+    {
+     "t": "Le dossier d’intervention est assimilé",
+     "sub": []
+    },
+    {
+     "t": "Les éléments d’information permettant de vérifier la conformité aux exigences sont transmis (indicateurs, délais, coût, dosimétrie…)",
+     "sub": []
+    },
+    {
+     "t": "La traçabilité de l’intervention est effective et l’alimentation du retour d’expérience assurée",
+     "sub": []
+    },
+    {
+     "t": "Le chantier est rendu dans sa configuration initiale d’exploitation",
+     "sub": []
+    },
+    {
+     "t": "L’inventaire du matériel utilisé et la restitution après contrôles (radioactivité, conformité) sont effectifs.",
+     "sub": []
+    }
+   ]
+  },
+  {
+   "id": "A3",
+   "titre": "Participer à la gestion des déchets",
+   "conditions": [
+    {
+     "t": "Le dossier d’intervention",
+     "sub": [
+      "Cahier des charges",
+      "Plan de prévention",
+      "Plan de circulation",
+      "Analyse des risques liés à l’intervention et à la gestion des déchets",
+      "Évaluation dosimétrique prévisionnelle initiale individuelle",
+      "Organigramme de l’intervention",
+      "Planning de l’intervention",
+      "Modes opératoires",
+      "Plan de contrôle : Domaine sécurité et Radioprotection",
+      "Qualité, Fiche d’écart"
+     ]
+    },
+    {
+     "t": "Installations, outillages et ressources techniques disponibles (matériels et moyens de sécurité et de contrôle)",
+     "sub": []
+    },
+    {
+     "t": "Équipements de Protection Individuelle",
+     "sub": []
+    },
+    {
+     "t": "Consignes de sécurité radiologique et conventionnelle",
+     "sub": []
+    },
+    {
+     "t": "Directives et consignes spécifiques à l’établissement",
+     "sub": []
+    },
+    {
+     "t": "Appareils de mesure disponibles. Normes et consignes de sécurité disponibles",
+     "sub": []
+    },
+    {
+     "t": "Zonage déchets disponible",
+     "sub": []
+    },
+    {
+     "t": "Certificats d’agrément des produits ou matériaux spécifiques à la gestion des déchets mis à disposition",
+     "sub": []
+    },
+    {
+     "t": "Certificats d'étalonnage des matériels disponibles.",
+     "sub": []
+    }
+   ],
+   "resultats": [
+    {
+     "t": "Le PAQP (Plan Assurance Qualité Particulier) est respecté",
+     "sub": []
+    },
+    {
+     "t": "Les règles de prévention des risques et les règles de sécurité sont respectées",
+     "sub": []
+    },
+    {
+     "t": "Les modes opératoires et les contrôles exigés sont respectés",
+     "sub": []
+    },
+    {
+     "t": "L’étiquetage de transport et l'identification des produits sont renseignés et sont conformes",
+     "sub": []
+    },
+    {
+     "t": "Les procédures d’utilisation des matériels sont respectées",
+     "sub": []
+    },
+    {
+     "t": "La traçabilité des déchets et des produits transformés est renseignée",
+     "sub": []
+    },
+    {
+     "t": "Le planning et les délais sont respectés",
+     "sub": []
+    },
+    {
+     "t": "Les règles de tri et de conditionnement des déchets sont respectées",
+     "sub": []
+    },
+    {
+     "t": "Le contrôle visuel et le contrôle radiologique sont effectifs",
+     "sub": []
+    },
+    {
+     "t": "Les contrôles sont correctement effectués",
+     "sub": []
+    },
+    {
+     "t": "Les installations et outillages sont en état de fonctionnement et les documents associés sont valides.",
+     "sub": []
+    }
+   ]
+  },
+  {
+   "id": "A4",
+   "titre": "Exécuter des opérations de démantèlement",
+   "conditions": [
+    {
+     "t": "Dossier d‘intervention lié au chantier",
+     "sub": [
+      "Analyse des risques (sécurité, sûreté, radiologique) et plan de prévention",
+      "Plan de circulation",
+      "Inventaire déchets",
+      "Procédures de gestion de déchets applicables",
+      "Retour d’expérience",
+      "Modes opératoires des matériels (test, fonctionnement)"
+     ]
+    },
+    {
+     "t": "Matériel de sécurité et consignes de sécurité internes",
+     "sub": []
+    },
+    {
+     "t": "Mise à disposition des matériels nécessaires",
+     "sub": []
+    },
+    {
+     "t": "Dossier technique des outillages et de l'installation, règles de gestion des déchets",
+     "sub": []
+    },
+    {
+     "t": "Certificats d’agrément des produits ou matériels spécifiques au démantèlement",
+     "sub": []
+    },
+    {
+     "t": "Matériels de contrôle pour l'exécution des travaux de démantèlement",
+     "sub": []
+    },
+    {
+     "t": "Appareils de mesures, certificats d'étalonnage.",
+     "sub": []
+    }
+   ],
+   "resultats": [
+    {
+     "t": "Le planning est respecté",
+     "sub": []
+    },
+    {
+     "t": "La mise en œuvre des équipements de protection individuelle est respectée",
+     "sub": []
+    },
+    {
+     "t": "La dosimétrie prévisionnelle est respectée",
+     "sub": []
+    },
+    {
+     "t": "Les risques liés à son activité sont pris en compte",
+     "sub": []
+    },
+    {
+     "t": "L’utilisation des emballages ou des conteneurs de transport est optimale",
+     "sub": []
+    },
+    {
+     "t": "La mise en œuvre des moyens de zonage, de confinement et de ventilation est optimale",
+     "sub": []
+    },
+    {
+     "t": "Le nombre et le volume de déchets sont optimisés",
+     "sub": []
+    },
+    {
+     "t": "Les règles de sécurité et de fonctionnement de l'équipement sont respectées",
+     "sub": []
+    },
+    {
+     "t": "Les matériels ou l'équipement sont restitués dans des conditions respectant les prescriptions techniques de l'installation vis à vis de l'environnement",
+     "sub": []
+    },
+    {
+     "t": "Les contrôles de conformité liés à la sécurité et aux exigences sont correctement effectués et tracés",
+     "sub": []
+    },
+    {
+     "t": "Les documents sont correctement remplis",
+     "sub": []
+    },
+    {
+     "t": "Le cahier des charges du démantèlement est respecté.",
+     "sub": []
+    }
+   ]
+  },
+  {
+   "id": "A5",
+   "titre": "Participer à la sécurité et à la radioprotection",
+   "conditions": [
+    {
+     "t": "Dossier d'intervention et plans des locaux d'intervention",
+     "sub": []
+    },
+    {
+     "t": "Cartographie et analyse des risques, dossier ALARA (cf : lexique), prévisionnel dosimétrique",
+     "sub": []
+    },
+    {
+     "t": "Plan de prévention",
+     "sub": []
+    },
+    {
+     "t": "Plan d'urgence interne",
+     "sub": []
+    },
+    {
+     "t": "Moyens de communications et moyens de télécommunication opérationnels",
+     "sub": []
+    },
+    {
+     "t": "Liste des documents de sécurité et de radioprotection de l'entreprise disponibles",
+     "sub": []
+    },
+    {
+     "t": "Étiquettes, panneaux, et tous moyens de balisage disponibles",
+     "sub": []
+    },
+    {
+     "t": "Plans d'évacuation",
+     "sub": []
+    },
+    {
+     "t": "Liste du matériel à disposition au magasin",
+     "sub": []
+    },
+    {
+     "t": "Appareils de mesure, gamme de mise en service et de contrôle de fonctionnement et certificats d'étalonnage disponibles",
+     "sub": []
+    },
+    {
+     "t": "Mise à disposition des procédures de mise en service des protections collectives et individuelles.",
+     "sub": []
+    }
+   ],
+   "resultats": [
+    {
+     "t": "La prise en compte de toutes les directives et connaissances nécessaires à son travail d'assistance est effective",
+     "sub": []
+    },
+    {
+     "t": "L’analyse des risques est respectée",
+     "sub": []
+    },
+    {
+     "t": "La prise en compte des informations liées à la sécurité et à la radioprotection est effective",
+     "sub": []
+    },
+    {
+     "t": "Les propositions d’amélioration sont transmises",
+     "sub": []
+    },
+    {
+     "t": "Les écarts sont relevés et transmis",
+     "sub": []
+    },
+    {
+     "t": "La traçabilité de l'intervention est établie et le retour d'expérience est clairement formulé",
+     "sub": []
+    },
+    {
+     "t": "En cas d’incident ou d’accident, les procédures de sécurité sont appliquées",
+     "sub": []
+    },
+    {
+     "t": "Les comportements des intervenants sont conformes aux directives internes à l'entreprise et du client",
+     "sub": []
+    },
+    {
+     "t": "Les différents contrôles sont réalisés et conformes.",
+     "sub": []
+    }
+   ]
+  },
+  {
+   "id": "A6",
+   "titre": "Exécuter des opérations de maintenance",
+   "conditions": [
+    {
+     "t": "Le plan de prévention de l’unité de travail ou du bien",
+     "sub": []
+    },
+    {
+     "t": "Dossier de préparation",
+     "sub": [
+      "Document unique d’évaluation des risques (Décret N°2001-1016)",
+      "Consignes écrites, le processus de remise en état, modes opératoires, procédures qualité…",
+      "Dossiers constructeurs (maintenance et technique)",
+      "Plan de surveillance",
+      "Les notices d’utilisation des appareils de mesure et de contrôle",
+      "Planning des interventions"
+     ]
+    },
+    {
+     "t": "Documents de maintenance",
+     "sub": []
+    },
+    {
+     "t": "Les outils informatiques, la gestion de maintenance assistée par ordinateurs (GMAO)",
+     "sub": []
+    },
+    {
+     "t": "Catalogues de composants, de pièces de rechange, de consommables",
+     "sub": []
+    },
+    {
+     "t": "Les outils de communication (document, téléphone, poste informatique, GMAO…)",
+     "sub": []
+    },
+    {
+     "t": "Carnet de notes et espace dédié à la communication",
+     "sub": []
+    },
+    {
+     "t": "Le bien",
+     "sub": []
+    },
+    {
+     "t": "Les outillages, les matériels de contrôle, de mesure, moyens de manutention, les moyens d’accès",
+     "sub": []
+    },
+    {
+     "t": "Les équipements de protection collectifs et individuels",
+     "sub": []
+    },
+    {
+     "t": "Les équipements nécessaires à la réalisation d’adaptations élémentaires",
+     "sub": []
+    },
+    {
+     "t": "Les éléments standards, les consommables, la matière d’œuvre",
+     "sub": []
+    },
+    {
+     "t": "Documentation technique des assemblages et de l’ajustage",
+     "sub": []
+    },
+    {
+     "t": "Les moyens d’accès",
+     "sub": []
+    },
+    {
+     "t": "Plan de maintenance préventive.",
+     "sub": []
+    }
+   ],
+   "resultats": [
+    {
+     "t": "L’amélioration proposée est recevable",
+     "sub": []
+    },
+    {
+     "t": "La manutention est effectuée en toute sécurité",
+     "sub": []
+    },
+    {
+     "t": "La sécurité des biens et des personnes n’est pas altérée à l’issue de la réparation",
+     "sub": []
+    },
+    {
+     "t": "La zone de travail est nettoyée et les déchets sont évacués",
+     "sub": []
+    },
+    {
+     "t": "Le bien est réparé et en état de marche",
+     "sub": []
+    },
+    {
+     "t": "Le descriptif de la solution est exploitable",
+     "sub": []
+    },
+    {
+     "t": "Les anomalies constatées sont signalées",
+     "sub": []
+    },
+    {
+     "t": "Les appareils de mesures, de contrôles sont utilisés suivant les procédures",
+     "sub": []
+    },
+    {
+     "t": "Les bons de sortie magasin ou de commande sont rédigés",
+     "sub": []
+    },
+    {
+     "t": "Les commentaires sont collectés et écrits pour mise à jour du dossier de maintenance",
+     "sub": []
+    },
+    {
+     "t": "Les composants, les pièces de rechange sont compatibles et disponibles",
+     "sub": []
+    },
+    {
+     "t": "Les consignes de sécurités sont respectées",
+     "sub": []
+    },
+    {
+     "t": "Les consommables et les pièces inutilisés sont rentrés au magasin",
+     "sub": []
+    },
+    {
+     "t": "Les éléments nécessaires à l’actualisation des schémas et documents techniques sont fournis",
+     "sub": []
+    },
+    {
+     "t": "Les mesures de prévention prescrites et les modes opératoires sont compris",
+     "sub": []
+    },
+    {
+     "t": "Les mesures de prévention spécifiques à l’intervention sont adaptées",
+     "sub": []
+    },
+    {
+     "t": "Les opérations de maintenance préventive sont réalisées conformément aux procédures",
+     "sub": []
+    },
+    {
+     "t": "Les opérations de surveillance sont réalisées conformément aux prescriptions",
+     "sub": []
+    },
+    {
+     "t": "Les outillages collectifs sont restitués en bon état au magasin",
+     "sub": []
+    },
+    {
+     "t": "Les outillages, les équipements, les matériels, les moyens de manutention sont préparés et vérifiés",
+     "sub": []
+    },
+    {
+     "t": "Les performances sont vérifiées",
+     "sub": []
+    },
+    {
+     "t": "Les résultats sont collectés et les documents de suivi sont renseignés pour permettre leur exploitation",
+     "sub": []
+    },
+    {
+     "t": "Les risques liés à l’environnement sont identifiés et évalués et les mesures de sécurité sont appliquées.",
+     "sub": []
+    }
+   ]
+  }
+ ],
+ "taches": [
+  {
+   "id": "T1.1",
+   "activite": "A1",
+   "titre": "S'informer auprès du chef d'équipe des éléments constitutifs du dossier",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP1.1",
+     "donnees": [
+      "Cahier des charges",
+      "Documents éventuels de traçabilité",
+      "Liste des matériels et disponibilités",
+      "Historique"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Matériels bien adaptés, disponibles, opérationnels"
+     ]
+    },
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP1.3",
+     "donnees": [
+      "Implantation de la zone de travail dans les locaux",
+      "Carte du site",
+      "Consignes spécifiques"
+     ],
+     "indicateurs": [
+      "La zone et le cheminement à suivre pour assurer des accès sans risque aux chantiers sont repérés",
+      "Les interfaces et les infrastructures nécessaires à l'accomplissement du chantier sont repérées et la gestion de ces éléments assurée"
+     ]
+    },
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP4.3",
+     "donnees": [
+      "Dossier d'intervention",
+      "Plan qualité de l'intervention",
+      "Analyse de sûreté définissant les domaines de fonctionnement autorisés",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les situations à risques sont connues (production ou sécurité) et la réaction adaptée",
+      "Les processus d'arrêt d'urgence des machines ou des outillages sont connus",
+      "Les paramètres importants à transmettre aux parties intéressées sont identifiés"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.2",
+   "activite": "A1",
+   "titre": "Informer sa hiérarchie des écarts constatés en termes de déroulement du chantier, de sécurité classique et/ou radiologique",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP1.1",
+     "donnees": [
+      "Cahier des charges",
+      "Documents éventuels de traçabilité",
+      "Liste des matériels et disponibilités",
+      "Historique"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Matériels bien adaptés, disponibles, opérationnels"
+     ]
+    },
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP2.2",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Liste du matériel à mettre en œuvre, des modes opératoires et des produits associés"
+     ],
+     "indicateurs": [
+      "Planning opérationnel",
+      "Démarche de limitation des aléas comprise et appliquée"
+     ]
+    },
+    {
+     "cp": "CP3.1",
+     "donnees": [
+      "Un dossier d’intervention validé",
+      "Une intervention",
+      "Documents spécifiques",
+      "Outil informatique",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Compte-rendu oral ou écrit approprié, conforme à l'organisation qualité",
+      "Maîtrise de l'information, identification et préservation des pièces justificatives en cas d'incident ou accident",
+      "Plan d’urgence mis en œuvre sur le chantier"
+     ]
+    },
+    {
+     "cp": "CP4.3",
+     "donnees": [
+      "Dossier d'intervention",
+      "Plan qualité de l'intervention",
+      "Analyse de sûreté définissant les domaines de fonctionnement autorisés",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les situations à risques sont connues (production ou sécurité) et la réaction adaptée",
+      "Les processus d'arrêt d'urgence des machines ou des outillages sont connus",
+      "Les paramètres importants à transmettre aux parties intéressées sont identifiés"
+     ]
+    },
+    {
+     "cp": "CP4.4",
+     "donnees": [
+      "Une situation mettant en œuvre un incident ou accident",
+      "Plan de prévention et plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les parades proposées sont adaptées et conformes à la règlementation",
+      "La gestion d'un exercice de simulation est maîtrisée"
+     ]
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    },
+    {
+     "cp": "CP5.2",
+     "donnees": [
+      "Un plan qualité"
+     ],
+     "indicateurs": [
+      "L’intervention s’effectue conformément au plan Qualité"
+     ]
+    },
+    {
+     "cp": "CP5.3",
+     "donnees": [
+      "Un chantier réputé «terminé»",
+      "Des intervenants ayant terminé leurs prestations"
+     ],
+     "indicateurs": [
+      "Chantier recevable",
+      "Les consignations peuvent être levées"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.3",
+   "activite": "A1",
+   "titre": "Informer la hiérarchie des remarques du client",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP2.2",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Liste du matériel à mettre en œuvre, des modes opératoires et des produits associés"
+     ],
+     "indicateurs": [
+      "Planning opérationnel",
+      "Démarche de limitation des aléas comprise et appliquée"
+     ]
+    },
+    {
+     "cp": "CP3.1",
+     "donnees": [
+      "Un dossier d’intervention validé",
+      "Une intervention",
+      "Documents spécifiques",
+      "Outil informatique",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Compte-rendu oral ou écrit approprié, conforme à l'organisation qualité",
+      "Maîtrise de l'information, identification et préservation des pièces justificatives en cas d'incident ou accident",
+      "Plan d’urgence mis en œuvre sur le chantier"
+     ]
+    },
+    {
+     "cp": "CP4.4",
+     "donnees": [
+      "Une situation mettant en œuvre un incident ou accident",
+      "Plan de prévention et plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les parades proposées sont adaptées et conformes à la règlementation",
+      "La gestion d'un exercice de simulation est maîtrisée"
+     ]
+    },
+    {
+     "cp": "CP5.2",
+     "donnees": [
+      "Un plan qualité"
+     ],
+     "indicateurs": [
+      "L’intervention s’effectue conformément au plan Qualité"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.4",
+   "activite": "A1",
+   "titre": "Assurer le suivi de sa dosimétrie individuelle et la comparer avec la valeur cible",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP1.1",
+     "donnees": [
+      "Cahier des charges",
+      "Documents éventuels de traçabilité",
+      "Liste des matériels et disponibilités",
+      "Historique"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Matériels bien adaptés, disponibles, opérationnels"
+     ]
+    },
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP3.1",
+     "donnees": [
+      "Un dossier d’intervention validé",
+      "Une intervention",
+      "Documents spécifiques",
+      "Outil informatique",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Compte-rendu oral ou écrit approprié, conforme à l'organisation qualité",
+      "Maîtrise de l'information, identification et préservation des pièces justificatives en cas d'incident ou accident",
+      "Plan d’urgence mis en œuvre sur le chantier"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.5",
+   "activite": "A1",
+   "titre": "Appliquer les consignes issues de l'analyse des risques",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP1.1",
+     "donnees": [
+      "Cahier des charges",
+      "Documents éventuels de traçabilité",
+      "Liste des matériels et disponibilités",
+      "Historique"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Matériels bien adaptés, disponibles, opérationnels"
+     ]
+    },
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP1.3",
+     "donnees": [
+      "Implantation de la zone de travail dans les locaux",
+      "Carte du site",
+      "Consignes spécifiques"
+     ],
+     "indicateurs": [
+      "La zone et le cheminement à suivre pour assurer des accès sans risque aux chantiers sont repérés",
+      "Les interfaces et les infrastructures nécessaires à l'accomplissement du chantier sont repérées et la gestion de ces éléments assurée"
+     ]
+    },
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    },
+    {
+     "cp": "CP4.3",
+     "donnees": [
+      "Dossier d'intervention",
+      "Plan qualité de l'intervention",
+      "Analyse de sûreté définissant les domaines de fonctionnement autorisés",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les situations à risques sont connues (production ou sécurité) et la réaction adaptée",
+      "Les processus d'arrêt d'urgence des machines ou des outillages sont connus",
+      "Les paramètres importants à transmettre aux parties intéressées sont identifiés"
+     ]
+    },
+    {
+     "cp": "CP4.4",
+     "donnees": [
+      "Une situation mettant en œuvre un incident ou accident",
+      "Plan de prévention et plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les parades proposées sont adaptées et conformes à la règlementation",
+      "La gestion d'un exercice de simulation est maîtrisée"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.6",
+   "activite": "A1",
+   "titre": "Interpréter les éléments d'information acquis par ses sens et/ou des appareils de mesure en vue d'appliquer la procédure prescrite (cas d'écarts constatés)",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    },
+    {
+     "cp": "CP5.2",
+     "donnees": [
+      "Un plan qualité"
+     ],
+     "indicateurs": [
+      "L’intervention s’effectue conformément au plan Qualité"
+     ]
+    },
+    {
+     "cp": "CP5.3",
+     "donnees": [
+      "Un chantier réputé «terminé»",
+      "Des intervenants ayant terminé leurs prestations"
+     ],
+     "indicateurs": [
+      "Chantier recevable",
+      "Les consignations peuvent être levées"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.7",
+   "activite": "A1",
+   "titre": "Arrêter le chantier en cas de danger grave et imminent",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP4.3",
+     "donnees": [
+      "Dossier d'intervention",
+      "Plan qualité de l'intervention",
+      "Analyse de sûreté définissant les domaines de fonctionnement autorisés",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les situations à risques sont connues (production ou sécurité) et la réaction adaptée",
+      "Les processus d'arrêt d'urgence des machines ou des outillages sont connus",
+      "Les paramètres importants à transmettre aux parties intéressées sont identifiés"
+     ]
+    },
+    {
+     "cp": "CP4.4",
+     "donnees": [
+      "Une situation mettant en œuvre un incident ou accident",
+      "Plan de prévention et plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les parades proposées sont adaptées et conformes à la règlementation",
+      "La gestion d'un exercice de simulation est maîtrisée"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.8",
+   "activite": "A1",
+   "titre": "Appliquer les procédures prescrites dans les documents « qualité »",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP1.1",
+     "donnees": [
+      "Cahier des charges",
+      "Documents éventuels de traçabilité",
+      "Liste des matériels et disponibilités",
+      "Historique"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Matériels bien adaptés, disponibles, opérationnels"
+     ]
+    },
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP1.3",
+     "donnees": [
+      "Implantation de la zone de travail dans les locaux",
+      "Carte du site",
+      "Consignes spécifiques"
+     ],
+     "indicateurs": [
+      "La zone et le cheminement à suivre pour assurer des accès sans risque aux chantiers sont repérés",
+      "Les interfaces et les infrastructures nécessaires à l'accomplissement du chantier sont repérées et la gestion de ces éléments assurée"
+     ]
+    },
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP4.3",
+     "donnees": [
+      "Dossier d'intervention",
+      "Plan qualité de l'intervention",
+      "Analyse de sûreté définissant les domaines de fonctionnement autorisés",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les situations à risques sont connues (production ou sécurité) et la réaction adaptée",
+      "Les processus d'arrêt d'urgence des machines ou des outillages sont connus",
+      "Les paramètres importants à transmettre aux parties intéressées sont identifiés"
+     ]
+    },
+    {
+     "cp": "CP4.4",
+     "donnees": [
+      "Une situation mettant en œuvre un incident ou accident",
+      "Plan de prévention et plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les parades proposées sont adaptées et conformes à la règlementation",
+      "La gestion d'un exercice de simulation est maîtrisée"
+     ]
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    },
+    {
+     "cp": "CP5.2",
+     "donnees": [
+      "Un plan qualité"
+     ],
+     "indicateurs": [
+      "L’intervention s’effectue conformément au plan Qualité"
+     ]
+    },
+    {
+     "cp": "CP5.3",
+     "donnees": [
+      "Un chantier réputé «terminé»",
+      "Des intervenants ayant terminé leurs prestations"
+     ],
+     "indicateurs": [
+      "Chantier recevable",
+      "Les consignations peuvent être levées"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.9",
+   "activite": "A1",
+   "titre": "Adopter une posture réflexive permettant l'optimisation de son intervention (coûts, délais, déchets, radioprotection…)",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP2.2",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Liste du matériel à mettre en œuvre, des modes opératoires et des produits associés"
+     ],
+     "indicateurs": [
+      "Planning opérationnel",
+      "Démarche de limitation des aléas comprise et appliquée"
+     ]
+    },
+    {
+     "cp": "CP3.1",
+     "donnees": [
+      "Un dossier d’intervention validé",
+      "Une intervention",
+      "Documents spécifiques",
+      "Outil informatique",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Compte-rendu oral ou écrit approprié, conforme à l'organisation qualité",
+      "Maîtrise de l'information, identification et préservation des pièces justificatives en cas d'incident ou accident",
+      "Plan d’urgence mis en œuvre sur le chantier"
+     ]
+    },
+    {
+     "cp": "CP4.3",
+     "donnees": [
+      "Dossier d'intervention",
+      "Plan qualité de l'intervention",
+      "Analyse de sûreté définissant les domaines de fonctionnement autorisés",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les situations à risques sont connues (production ou sécurité) et la réaction adaptée",
+      "Les processus d'arrêt d'urgence des machines ou des outillages sont connus",
+      "Les paramètres importants à transmettre aux parties intéressées sont identifiés"
+     ]
+    },
+    {
+     "cp": "CP4.4",
+     "donnees": [
+      "Une situation mettant en œuvre un incident ou accident",
+      "Plan de prévention et plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les parades proposées sont adaptées et conformes à la règlementation",
+      "La gestion d'un exercice de simulation est maîtrisée"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.10",
+   "activite": "A1",
+   "titre": "Renseigner la traçabilité des tâches exécutées et des écarts constatés dans tous les domaines exigés",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP2.2",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Liste du matériel à mettre en œuvre, des modes opératoires et des produits associés"
+     ],
+     "indicateurs": [
+      "Planning opérationnel",
+      "Démarche de limitation des aléas comprise et appliquée"
+     ]
+    },
+    {
+     "cp": "CP3.1",
+     "donnees": [
+      "Un dossier d’intervention validé",
+      "Une intervention",
+      "Documents spécifiques",
+      "Outil informatique",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Compte-rendu oral ou écrit approprié, conforme à l'organisation qualité",
+      "Maîtrise de l'information, identification et préservation des pièces justificatives en cas d'incident ou accident",
+      "Plan d’urgence mis en œuvre sur le chantier"
+     ]
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    },
+    {
+     "cp": "CP5.2",
+     "donnees": [
+      "Un plan qualité"
+     ],
+     "indicateurs": [
+      "L’intervention s’effectue conformément au plan Qualité"
+     ]
+    },
+    {
+     "cp": "CP5.3",
+     "donnees": [
+      "Un chantier réputé «terminé»",
+      "Des intervenants ayant terminé leurs prestations"
+     ],
+     "indicateurs": [
+      "Chantier recevable",
+      "Les consignations peuvent être levées"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.11",
+   "activite": "A1",
+   "titre": "Contrôler la bonne exécution des travaux",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    },
+    {
+     "cp": "CP5.2",
+     "donnees": [
+      "Un plan qualité"
+     ],
+     "indicateurs": [
+      "L’intervention s’effectue conformément au plan Qualité"
+     ]
+    },
+    {
+     "cp": "CP5.3",
+     "donnees": [
+      "Un chantier réputé «terminé»",
+      "Des intervenants ayant terminé leurs prestations"
+     ],
+     "indicateurs": [
+      "Chantier recevable",
+      "Les consignations peuvent être levées"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.12",
+   "activite": "A1",
+   "titre": "Participer au contrôle du respect des objectifs de production vis-à-vis du client",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP5.2",
+     "donnees": [
+      "Un plan qualité"
+     ],
+     "indicateurs": [
+      "L’intervention s’effectue conformément au plan Qualité"
+     ]
+    },
+    {
+     "cp": "CP5.3",
+     "donnees": [
+      "Un chantier réputé «terminé»",
+      "Des intervenants ayant terminé leurs prestations"
+     ],
+     "indicateurs": [
+      "Chantier recevable",
+      "Les consignations peuvent être levées"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.13",
+   "activite": "A1",
+   "titre": "Contrôler le respect des objectifs de dosimétrie, de sécurité et de qualité vis-à-vis de son intervention",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP3.1",
+     "donnees": [
+      "Un dossier d’intervention validé",
+      "Une intervention",
+      "Documents spécifiques",
+      "Outil informatique",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Compte-rendu oral ou écrit approprié, conforme à l'organisation qualité",
+      "Maîtrise de l'information, identification et préservation des pièces justificatives en cas d'incident ou accident",
+      "Plan d’urgence mis en œuvre sur le chantier"
+     ]
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    },
+    {
+     "cp": "CP5.2",
+     "donnees": [
+      "Un plan qualité"
+     ],
+     "indicateurs": [
+      "L’intervention s’effectue conformément au plan Qualité"
+     ]
+    },
+    {
+     "cp": "CP5.3",
+     "donnees": [
+      "Un chantier réputé «terminé»",
+      "Des intervenants ayant terminé leurs prestations"
+     ],
+     "indicateurs": [
+      "Chantier recevable",
+      "Les consignations peuvent être levées"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.14",
+   "activite": "A1",
+   "titre": "Mesurer et rendre compte des écarts",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP3.1",
+     "donnees": [
+      "Un dossier d’intervention validé",
+      "Une intervention",
+      "Documents spécifiques",
+      "Outil informatique",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Compte-rendu oral ou écrit approprié, conforme à l'organisation qualité",
+      "Maîtrise de l'information, identification et préservation des pièces justificatives en cas d'incident ou accident",
+      "Plan d’urgence mis en œuvre sur le chantier"
+     ]
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    },
+    {
+     "cp": "CP5.2",
+     "donnees": [
+      "Un plan qualité"
+     ],
+     "indicateurs": [
+      "L’intervention s’effectue conformément au plan Qualité"
+     ]
+    },
+    {
+     "cp": "CP5.3",
+     "donnees": [
+      "Un chantier réputé «terminé»",
+      "Des intervenants ayant terminé leurs prestations"
+     ],
+     "indicateurs": [
+      "Chantier recevable",
+      "Les consignations peuvent être levées"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.15",
+   "activite": "A1",
+   "titre": "Vérifier le bon fonctionnement des appareils et instruments de contrôle et de mesure (validité des contrôles de conformité et d'étalonnage, bon fonctionnement)",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T1.16",
+   "activite": "A1",
+   "titre": "Participer à la mise en œuvre des contrôles de l'environnement de travail et des déchets générés",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP4.2",
+     "donnees": [
+      "Les prescriptions de l'installation relatives aux déchets",
+      "La nature et le type des déchets (classification de l'installation)",
+      "Les containers de stockage",
+      "Les documents de suivi"
+     ],
+     "indicateurs": [
+      "Déchets triés, conditionnés et entreposés dans les conditions règlementaires"
+     ]
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités",
+      "EXÉCUTER DES OPÉRATIONS DE LOGISTIQUE"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T2.1",
+   "activite": "A2",
+   "titre": "Mettre en œuvre l'ensemble des matériels nécessaires à l'intervention",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T2.2",
+   "activite": "A2",
+   "titre": "Assurer la disponibilité et contrôler le fonctionnement des matériels par rapport à des paramètres nominaux",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T2.3",
+   "activite": "A2",
+   "titre": "Mettre en œuvre le confinement",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T2.4",
+   "activite": "A2",
+   "titre": "Participer à l'approvisionnement du chantier",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP1.1",
+     "donnees": [
+      "Cahier des charges",
+      "Documents éventuels de traçabilité",
+      "Liste des matériels et disponibilités",
+      "Historique"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Matériels bien adaptés, disponibles, opérationnels"
+     ]
+    },
+    {
+     "cp": "CP1.3",
+     "donnees": [
+      "Implantation de la zone de travail dans les locaux",
+      "Carte du site",
+      "Consignes spécifiques"
+     ],
+     "indicateurs": [
+      "La zone et le cheminement à suivre pour assurer des accès sans risque aux chantiers sont repérés",
+      "Les interfaces et les infrastructures nécessaires à l'accomplissement du chantier sont repérées et la gestion de ces éléments assurée"
+     ]
+    },
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T2.5",
+   "activite": "A2",
+   "titre": "Participer à la décontamination des locaux et des matériels",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP1.3",
+     "donnees": [
+      "Implantation de la zone de travail dans les locaux",
+      "Carte du site",
+      "Consignes spécifiques"
+     ],
+     "indicateurs": [
+      "La zone et le cheminement à suivre pour assurer des accès sans risque aux chantiers sont repérés",
+      "Les interfaces et les infrastructures nécessaires à l'accomplissement du chantier sont repérées et la gestion de ces éléments assurée"
+     ]
+    },
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    },
+    {
+     "cp": "CP4.3",
+     "donnees": [
+      "Dossier d'intervention",
+      "Plan qualité de l'intervention",
+      "Analyse de sûreté définissant les domaines de fonctionnement autorisés",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les situations à risques sont connues (production ou sécurité) et la réaction adaptée",
+      "Les processus d'arrêt d'urgence des machines ou des outillages sont connus",
+      "Les paramètres importants à transmettre aux parties intéressées sont identifiés"
+     ]
+    },
+    {
+     "cp": "CP4.5",
+     "donnees": [],
+     "indicateurs": []
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    },
+    {
+     "cp": "CP5.3",
+     "donnees": [
+      "Un chantier réputé «terminé»",
+      "Des intervenants ayant terminé leurs prestations"
+     ],
+     "indicateurs": [
+      "Chantier recevable",
+      "Les consignations peuvent être levées"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T2.6",
+   "activite": "A2",
+   "titre": "Réaliser la manutention manuelle",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP1.3",
+     "donnees": [
+      "Implantation de la zone de travail dans les locaux",
+      "Carte du site",
+      "Consignes spécifiques"
+     ],
+     "indicateurs": [
+      "La zone et le cheminement à suivre pour assurer des accès sans risque aux chantiers sont repérés",
+      "Les interfaces et les infrastructures nécessaires à l'accomplissement du chantier sont repérées et la gestion de ces éléments assurée"
+     ]
+    },
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    },
+    {
+     "cp": "CP4.3",
+     "donnees": [
+      "Dossier d'intervention",
+      "Plan qualité de l'intervention",
+      "Analyse de sûreté définissant les domaines de fonctionnement autorisés",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les situations à risques sont connues (production ou sécurité) et la réaction adaptée",
+      "Les processus d'arrêt d'urgence des machines ou des outillages sont connus",
+      "Les paramètres importants à transmettre aux parties intéressées sont identifiés"
+     ]
+    },
+    {
+     "cp": "CP4.5",
+     "donnees": [],
+     "indicateurs": []
+    }
+   ]
+  },
+  {
+   "id": "T2.7",
+   "activite": "A2",
+   "titre": "Suivre le planning et les paramètres de production associés (qualité, coûts)",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP2.2",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Liste du matériel à mettre en œuvre, des modes opératoires et des produits associés"
+     ],
+     "indicateurs": [
+      "Planning opérationnel",
+      "Démarche de limitation des aléas comprise et appliquée"
+     ]
+    },
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP5.2",
+     "donnees": [
+      "Un plan qualité"
+     ],
+     "indicateurs": [
+      "L’intervention s’effectue conformément au plan Qualité"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T2.8",
+   "activite": "A2",
+   "titre": "Identifier les écarts et organiser les corrections mises en œuvre avec l'accord de la hiérarchie et du client",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP3.1",
+     "donnees": [
+      "Un dossier d’intervention validé",
+      "Une intervention",
+      "Documents spécifiques",
+      "Outil informatique",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Compte-rendu oral ou écrit approprié, conforme à l'organisation qualité",
+      "Maîtrise de l'information, identification et préservation des pièces justificatives en cas d'incident ou accident",
+      "Plan d’urgence mis en œuvre sur le chantier"
+     ]
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    },
+    {
+     "cp": "CP5.2",
+     "donnees": [
+      "Un plan qualité"
+     ],
+     "indicateurs": [
+      "L’intervention s’effectue conformément au plan Qualité",
+      "PARTICIPER À LA GESTION DES DÉCHETS"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T3.1",
+   "activite": "A3",
+   "titre": "Mettre en œuvre, suivant les conditions locales du chantier, des opérations de collecte, tri, conditionnement, étiquetage et évacuation des déchets (zonage, balisage) et reprise d'effluents : trier ses déchets, conditionner et reconditionner des déchets, respecter le zonage",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP1.3",
+     "donnees": [
+      "Implantation de la zone de travail dans les locaux",
+      "Carte du site",
+      "Consignes spécifiques"
+     ],
+     "indicateurs": [
+      "La zone et le cheminement à suivre pour assurer des accès sans risque aux chantiers sont repérés",
+      "Les interfaces et les infrastructures nécessaires à l'accomplissement du chantier sont repérées et la gestion de ces éléments assurée"
+     ]
+    },
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    },
+    {
+     "cp": "CP4.2",
+     "donnees": [
+      "Les prescriptions de l'installation relatives aux déchets",
+      "La nature et le type des déchets (classification de l'installation)",
+      "Les containers de stockage",
+      "Les documents de suivi"
+     ],
+     "indicateurs": [
+      "Déchets triés, conditionnés et entreposés dans les conditions règlementaires"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T3.2",
+   "activite": "A3",
+   "titre": "Démarrer, conduire et arrêter un système automatisé ou une installation de gestion ou traitement de déchets en utilisant des moyens de manutention associés",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    },
+    {
+     "cp": "CP4.2",
+     "donnees": [
+      "Les prescriptions de l'installation relatives aux déchets",
+      "La nature et le type des déchets (classification de l'installation)",
+      "Les containers de stockage",
+      "Les documents de suivi"
+     ],
+     "indicateurs": [
+      "Déchets triés, conditionnés et entreposés dans les conditions règlementaires"
+     ]
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T4.1",
+   "activite": "A4",
+   "titre": "Démarrer, conduire et arrêter un outillage spécifique nécessaire aux travaux envisagés (métaux et béton)",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    },
+    {
+     "cp": "CP4.2",
+     "donnees": [
+      "Les prescriptions de l'installation relatives aux déchets",
+      "La nature et le type des déchets (classification de l'installation)",
+      "Les containers de stockage",
+      "Les documents de suivi"
+     ],
+     "indicateurs": [
+      "Déchets triés, conditionnés et entreposés dans les conditions règlementaires"
+     ]
+    },
+    {
+     "cp": "CP4.4",
+     "donnees": [
+      "Une situation mettant en œuvre un incident ou accident",
+      "Plan de prévention et plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les parades proposées sont adaptées et conformes à la règlementation",
+      "La gestion d'un exercice de simulation est maîtrisée"
+     ]
+    },
+    {
+     "cp": "CP4.5",
+     "donnees": [],
+     "indicateurs": []
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T4.2",
+   "activite": "A4",
+   "titre": "Procéder au déplacement de charges",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP1.3",
+     "donnees": [
+      "Implantation de la zone de travail dans les locaux",
+      "Carte du site",
+      "Consignes spécifiques"
+     ],
+     "indicateurs": [
+      "La zone et le cheminement à suivre pour assurer des accès sans risque aux chantiers sont repérés",
+      "Les interfaces et les infrastructures nécessaires à l'accomplissement du chantier sont repérées et la gestion de ces éléments assurée"
+     ]
+    },
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    },
+    {
+     "cp": "CP4.3",
+     "donnees": [
+      "Dossier d'intervention",
+      "Plan qualité de l'intervention",
+      "Analyse de sûreté définissant les domaines de fonctionnement autorisés",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les situations à risques sont connues (production ou sécurité) et la réaction adaptée",
+      "Les processus d'arrêt d'urgence des machines ou des outillages sont connus",
+      "Les paramètres importants à transmettre aux parties intéressées sont identifiés"
+     ]
+    },
+    {
+     "cp": "CP4.5",
+     "donnees": [],
+     "indicateurs": []
+    }
+   ]
+  },
+  {
+   "id": "T5.1",
+   "activite": "A5",
+   "titre": "Appliquer les mesures de sauvegarde adaptées dès qu'un écart, un incident ou un accident est constaté et en conserver l'historique et/ou les pièces justificatives et les résultats associés",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP3.1",
+     "donnees": [
+      "Un dossier d’intervention validé",
+      "Une intervention",
+      "Documents spécifiques",
+      "Outil informatique",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Compte-rendu oral ou écrit approprié, conforme à l'organisation qualité",
+      "Maîtrise de l'information, identification et préservation des pièces justificatives en cas d'incident ou accident",
+      "Plan d’urgence mis en œuvre sur le chantier"
+     ]
+    },
+    {
+     "cp": "CP4.3",
+     "donnees": [
+      "Dossier d'intervention",
+      "Plan qualité de l'intervention",
+      "Analyse de sûreté définissant les domaines de fonctionnement autorisés",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les situations à risques sont connues (production ou sécurité) et la réaction adaptée",
+      "Les processus d'arrêt d'urgence des machines ou des outillages sont connus",
+      "Les paramètres importants à transmettre aux parties intéressées sont identifiés"
+     ]
+    },
+    {
+     "cp": "CP4.4",
+     "donnees": [
+      "Une situation mettant en œuvre un incident ou accident",
+      "Plan de prévention et plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les parades proposées sont adaptées et conformes à la règlementation",
+      "La gestion d'un exercice de simulation est maîtrisée"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T5.2",
+   "activite": "A5",
+   "titre": "Faire des contrôles radiologiques",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP1.1",
+     "donnees": [
+      "Cahier des charges",
+      "Documents éventuels de traçabilité",
+      "Liste des matériels et disponibilités",
+      "Historique"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Matériels bien adaptés, disponibles, opérationnels"
+     ]
+    },
+    {
+     "cp": "CP3.1",
+     "donnees": [
+      "Un dossier d’intervention validé",
+      "Une intervention",
+      "Documents spécifiques",
+      "Outil informatique",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Compte-rendu oral ou écrit approprié, conforme à l'organisation qualité",
+      "Maîtrise de l'information, identification et préservation des pièces justificatives en cas d'incident ou accident",
+      "Plan d’urgence mis en œuvre sur le chantier"
+     ]
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T5.3",
+   "activite": "A5",
+   "titre": "Assurer l'habillage et le déshabillage",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP4.3",
+     "donnees": [
+      "Dossier d'intervention",
+      "Plan qualité de l'intervention",
+      "Analyse de sûreté définissant les domaines de fonctionnement autorisés",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les situations à risques sont connues (production ou sécurité) et la réaction adaptée",
+      "Les processus d'arrêt d'urgence des machines ou des outillages sont connus",
+      "Les paramètres importants à transmettre aux parties intéressées sont identifiés"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T5.4",
+   "activite": "A5",
+   "titre": "Faire respecter les consignes de sûreté et de sécurité",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP4.3",
+     "donnees": [
+      "Dossier d'intervention",
+      "Plan qualité de l'intervention",
+      "Analyse de sûreté définissant les domaines de fonctionnement autorisés",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les situations à risques sont connues (production ou sécurité) et la réaction adaptée",
+      "Les processus d'arrêt d'urgence des machines ou des outillages sont connus",
+      "Les paramètres importants à transmettre aux parties intéressées sont identifiés"
+     ]
+    },
+    {
+     "cp": "CP4.4",
+     "donnees": [
+      "Une situation mettant en œuvre un incident ou accident",
+      "Plan de prévention et plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les parades proposées sont adaptées et conformes à la règlementation",
+      "La gestion d'un exercice de simulation est maîtrisée"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T5.5",
+   "activite": "A5",
+   "titre": "Mettre en place des protections biologiques",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP4.3",
+     "donnees": [
+      "Dossier d'intervention",
+      "Plan qualité de l'intervention",
+      "Analyse de sûreté définissant les domaines de fonctionnement autorisés",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Les situations à risques sont connues (production ou sécurité) et la réaction adaptée",
+      "Les processus d'arrêt d'urgence des machines ou des outillages sont connus",
+      "Les paramètres importants à transmettre aux parties intéressées sont identifiés"
+     ]
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T6.1",
+   "activite": "A6",
+   "titre": "Préparer son intervention et/ou la logistique associée",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP1.1",
+     "donnees": [
+      "Cahier des charges",
+      "Documents éventuels de traçabilité",
+      "Liste des matériels et disponibilités",
+      "Historique"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Matériels bien adaptés, disponibles, opérationnels"
+     ]
+    },
+    {
+     "cp": "CP1.2",
+     "donnees": [
+      "Dossier de réalisation des travaux : dossier d’intervention, plan de site, cartographie (zonage), plan de prévention",
+      "Arrêté INB"
+     ],
+     "indicateurs": [
+      "Dossier identifié",
+      "Procédure appliquée en toute sécurité"
+     ]
+    },
+    {
+     "cp": "CP2.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Plan de site",
+      "Cartographie (zonage)",
+      "Plan de prévention"
+     ],
+     "indicateurs": [
+      "Les consignes et procédures adaptées sont appliquées",
+      "Les moyens de prévention et de protection sont définis"
+     ]
+    },
+    {
+     "cp": "CP2.2",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Liste du matériel à mettre en œuvre des modes opératoires et des produits associés"
+     ],
+     "indicateurs": [
+      "Planning opérationnel",
+      "Démarche de limitation des aléas comprise et appliquée"
+     ]
+    },
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T6.2",
+   "activite": "A6",
+   "titre": "Proposer des améliorations sur l'environnement de son intervention",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP3.1",
+     "donnees": [
+      "Un dossier d’intervention validé",
+      "Une intervention",
+      "Documents spécifiques",
+      "Outil informatique",
+      "Plan d'urgence interne"
+     ],
+     "indicateurs": [
+      "Compte-rendu oral ou écrit approprié, conforme à l'organisation qualité",
+      "Maîtrise de l'information, identification et préservation des pièces justificatives en cas d'incident ou accident",
+      "Plan d’urgence mis en œuvre sur le chantier"
+     ]
+    },
+    {
+     "cp": "CP5.2",
+     "donnees": [
+      "Un plan qualité"
+     ],
+     "indicateurs": [
+      "L’intervention s’effectue conformément au plan Qualité"
+     ]
+    },
+    {
+     "cp": "CP5.3",
+     "donnees": [
+      "Un chantier réputé «terminé»",
+      "Des intervenants ayant terminé leurs prestations"
+     ],
+     "indicateurs": [
+      "Chantier recevable",
+      "Les consignations peuvent être levées"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T6.3",
+   "activite": "A6",
+   "titre": "Réparer un bien par remplacement de composants",
+   "autonomie": 2,
+   "competences": [
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    },
+    {
+     "cp": "CP4.5",
+     "donnees": [],
+     "indicateurs": []
+    }
+   ]
+  },
+  {
+   "id": "T6.4",
+   "activite": "A6",
+   "titre": "Réaliser des opérations prescrites de contrôle et/ou de surveillance",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    },
+    {
+     "cp": "CP4.5",
+     "donnees": [],
+     "indicateurs": []
+    },
+    {
+     "cp": "CP5.1",
+     "donnees": [
+      "Analyse des risques et plan qualité de l'intervention",
+      "Des instruments de mesure et de contrôle pour la production et la sécurité/radioprotection",
+      "Modes d’emplois"
+     ],
+     "indicateurs": [
+      "Mesures effectuées résultats consignés et exploités"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "T6.5",
+   "activite": "A6",
+   "titre": "Réaliser des opérations planifiées",
+   "autonomie": 1,
+   "competences": [
+    {
+     "cp": "CP2.3",
+     "donnees": [
+      "Dossier d’intervention",
+      "Échéancier",
+      "Dossiers \"matériels et outillages\""
+     ],
+     "indicateurs": [
+      "Planning matériel opérationnel",
+      "Présence de toutes les utilités et produits requis pour un fonctionnement opérationnel"
+     ]
+    },
+    {
+     "cp": "CP4.1",
+     "donnees": [
+      "Dossier d’intervention",
+      "Matériels",
+      "Notices, documents d'étalonnage",
+      "Mode d’emploi"
+     ],
+     "indicateurs": [
+      "Exécution dans le cadre des règles d'exploitation de l'installation",
+      "Mise en service et contrôle de bon fonctionnement conforme aux documents validés"
+     ]
+    },
+    {
+     "cp": "CP4.5",
+     "donnees": [],
+     "indicateurs": []
+    },
+    {
+     "cp": "CP5.2",
+     "donnees": [
+      "Un plan qualité"
+     ],
+     "indicateurs": [
+      "L’intervention s’effectue conformément au plan Qualité"
+     ]
+    }
+   ]
+  }
+ ],
+ "competences": [
+  {
+   "id": "CP1.1",
+   "groupe": "CP1",
+   "groupeTitre": "S'informer",
+   "libelle": "Rechercher les informations relatives au dossier d'intervention",
+   "savoirs": [
+    "S1",
+    "S2",
+    "S4",
+    "S6",
+    "S7",
+    "S8"
+   ]
+  },
+  {
+   "id": "CP1.2",
+   "groupe": "CP1",
+   "groupeTitre": "S'informer",
+   "libelle": "Respecter les contraintes et réglementations de l'environnement nucléaire",
+   "savoirs": [
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+   ]
+  },
+  {
+   "id": "CP1.3",
+   "groupe": "CP1",
+   "groupeTitre": "S'informer",
+   "libelle": "Maîtriser les données géographiques et se repérer dans l'espace professionnel",
+   "savoirs": [
+    "S1",
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "id": "CP2.1",
+   "groupe": "CP2",
+   "groupeTitre": "Préparer son intervention",
+   "libelle": "Identifier les risques réels ou potentiels",
+   "savoirs": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S8"
+   ]
+  },
+  {
+   "id": "CP2.2",
+   "groupe": "CP2",
+   "groupeTitre": "Préparer son intervention",
+   "libelle": "Participer à la planification du chantier",
+   "savoirs": [
+    "S3",
+    "S5",
+    "S8"
+   ]
+  },
+  {
+   "id": "CP2.3",
+   "groupe": "CP2",
+   "groupeTitre": "Préparer son intervention",
+   "libelle": "Respecter l'organisation matérielle de l'intervention",
+   "savoirs": [
+    "S1",
+    "S2",
+    "S3",
+    "S6",
+    "S8"
+   ]
+  },
+  {
+   "id": "CP3.1",
+   "groupe": "CP3",
+   "groupeTitre": "Communiquer avec sa hiérarchie",
+   "libelle": "Informer sa hiérarchie du déroulement des interventions",
+   "savoirs": [
+    "S3",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "id": "CP4.1",
+   "groupe": "CP4",
+   "groupeTitre": "Intervenir en environnement nucléaire",
+   "libelle": "Mettre en œuvre des matériels",
+   "savoirs": [
+    "S1",
+    "S2",
+    "S3",
+    "S6",
+    "S8"
+   ]
+  },
+  {
+   "id": "CP4.2",
+   "groupe": "CP4",
+   "groupeTitre": "Intervenir en environnement nucléaire",
+   "libelle": "Assurer l'évacuation des déchets",
+   "savoirs": [
+    "S7"
+   ]
+  },
+  {
+   "id": "CP4.3",
+   "groupe": "CP4",
+   "groupeTitre": "Intervenir en environnement nucléaire",
+   "libelle": "Réagir en fonction des risques évalués",
+   "savoirs": [
+    "S3",
+    "S4",
+    "S8"
+   ]
+  },
+  {
+   "id": "CP4.4",
+   "groupe": "CP4",
+   "groupeTitre": "Intervenir en environnement nucléaire",
+   "libelle": "Réagir en cas d'incident ou d'accident",
+   "savoirs": [
+    "S3",
+    "S4",
+    "S8"
+   ]
+  },
+  {
+   "id": "CP4.5",
+   "groupe": "CP4",
+   "groupeTitre": "Intervenir en environnement nucléaire",
+   "libelle": "Réaliser des opérations de maintenance",
+   "savoirs": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "descriptifCommun": {
+    "taches": [
+     "T2.5",
+     "T2.6",
+     "T4.1",
+     "T4.2",
+     "T6.3",
+     "T6.4",
+     "T6.5"
+    ],
+    "donnees": [
+     "Tout ou partie des données suivantes :",
+     "Si action corrective : le diagnostic ; l'identification du composant défaillant ; le bien en panne totale ou partielle et les conditions de son environnement",
+     "Si action préventive : planning des interventions ; le bien et les conditions de son environnement",
+     "Cahier des charges",
+     "Dossier d'intervention : bon de travail ; consignes, autorisation de travail ; procédures écrites ; plan d'implantation ; document unique d'évaluation des risques ; plan de prévention ; dossier technique",
+     "Toutes informations en provenance de l'utilisateur ou d'autres intervenants",
+     "Les équipements de protection individuels et collectifs",
+     "Des instruments de mesure et de contrôle de radioprotection",
+     "Les pièces de rechange",
+     "Consommables",
+     "Les moyens de communication"
+    ],
+    "indicateurs": [
+     "Les outillages, les consommables, les moyens de manutention, le sous-ensemble ou le composant sont rassemblés et vérifiés",
+     "Toutes indisponibilités sont signalées et expliquées",
+     "Le sous-ensemble et ses frontières sont situés sur le bien sans erreur",
+     "Les éléments d'assemblage et de liaison relatifs à la dépose sont tous identifiés et situés sur le bien",
+     "Le repérage effectué optimise la durée de l'intervention, évite les erreurs et facilite les réglages",
+     "Les consignes et procédures sont respectées",
+     "Les outillages choisis parmi les matériels préparés et vérifiés sont adaptés et correctement utilisés",
+     "Les moyens de manutention sont correctement mis en œuvre",
+     "Les éléments d'assemblage et les pièces sont nettoyés, contrôlés, échangés si nécessaire, rangés et ordonnancés en préparation de l'activité de remontage",
+     "Le sous-ensemble, le composant est démonté sans détérioration",
+     "Les consignes et la gamme sont respectées",
+     "Le composant est remonté sans erreur et sans détérioration",
+     "Le composant est réglé selon les procédures",
+     "Les activités liées à l'intervention (déplacement de charges, manipulation de produits…) n'interfèrent pas sur la sécurité des personnes et des biens",
+     "Les risques sont identifiés et les mesures de prévention respectées",
+     "Le plan de prévention est compris et appliqué"
+    ]
+   }
+  },
+  {
+   "id": "CP5.1",
+   "groupe": "CP5",
+   "groupeTitre": "Contrôler",
+   "libelle": "Contrôler les paramètres physiques de l'environnement",
+   "savoirs": [
+    "S6",
+    "S8"
+   ]
+  },
+  {
+   "id": "CP5.2",
+   "groupe": "CP5",
+   "groupeTitre": "Contrôler",
+   "libelle": "Participer au contrôle de la qualité",
+   "savoirs": [
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S8"
+   ]
+  },
+  {
+   "id": "CP5.3",
+   "groupe": "CP5",
+   "groupeTitre": "Contrôler",
+   "libelle": "Participer au contrôle final",
+   "savoirs": [
+    "S3",
+    "S4",
+    "S6",
+    "S8"
+   ]
+  }
+ ]
+}

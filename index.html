@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Référentiel TIIN</title>
+<meta name="description" content="Consultation du référentiel Bac Pro TIIN : tâches réalisées en atelier → compétences et savoirs associés.">
+<meta name="theme-color" content="#16324f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="barre">
+  <div class="marque">
+    <img src="icon.svg" alt="" width="32" height="32">
+    <div>
+      <strong>Référentiel TIIN</strong>
+      <span>Bac Pro Techniques d'Interventions sur Installations Nucléaires</span>
+    </div>
+  </div>
+  <nav class="onglets" role="tablist">
+    <button role="tab" data-vue="seance" aria-selected="true">Séance atelier</button>
+    <button role="tab" data-vue="savoirs">Savoirs</button>
+    <button role="tab" data-vue="fiches">Tâches &amp; compétences</button>
+    <button role="tab" data-vue="matrices">Matrices</button>
+    <button role="tab" data-vue="suivi">Suivi des séances</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ======================= SÉANCE ======================= -->
+  <section id="vue-seance" class="vue active">
+    <div class="seance-entete">
+      <input id="seance-titre" type="text" placeholder="Intitulé de l'activité (ex. : Remplacement d'une vanne en zone contrôlée)">
+      <input id="seance-date" type="date">
+      <div class="actions">
+        <button id="btn-enregistrer" class="primaire">Enregistrer la séance</button>
+        <button id="btn-copier">Copier le résumé</button>
+        <button id="btn-imprimer">Imprimer / PDF</button>
+        <button id="btn-vider" class="discret">Tout décocher</button>
+      </div>
+    </div>
+    <div class="seance-grille">
+      <aside class="panneau taches">
+        <div class="panneau-tete">
+          <h2>Tâches réalisées</h2>
+          <span id="compteur-taches" class="badge">0</span>
+        </div>
+        <input id="recherche-taches" type="search" placeholder="Filtrer les tâches (ex. : confinement, charges…)">
+        <div id="liste-taches"></div>
+      </aside>
+      <div class="resultats">
+        <div id="vide-seance" class="vide">
+          <p><strong>Cochez les tâches réalisées pendant l'activité.</strong></p>
+          <p>Les compétences mobilisées s'affichent ici, de la plus liée à la moins liée, avec leurs indicateurs de performance, puis les savoirs associés et leurs niveaux taxonomiques.</p>
+        </div>
+        <div id="bloc-resultats" hidden>
+          <section class="panneau">
+            <div class="panneau-tete">
+              <h2>Compétences mobilisées</h2>
+              <span class="aide">Score = nombre de tâches cochées qui mobilisent la compétence</span>
+            </div>
+            <ol id="liste-competences" class="classement"></ol>
+          </section>
+          <section class="panneau">
+            <div class="panneau-tete">
+              <h2>Savoirs associés</h2>
+              <span class="aide">Score = nombre de liens tâche → compétence → savoir</span>
+            </div>
+            <div class="filtre-niveaux" id="filtre-niveaux-seance"></div>
+            <ol id="liste-savoirs" class="classement"></ol>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= SAVOIRS ======================= -->
+  <section id="vue-savoirs" class="vue">
+    <div class="outils">
+      <input id="recherche-savoirs" type="search" placeholder="Rechercher dans les savoirs (ex. : élingage, ALARA, consignation…)">
+      <div class="filtre-niveaux" id="filtre-niveaux-savoirs"></div>
+    </div>
+    <details class="legende-niveaux">
+      <summary>Définition des niveaux taxonomiques</summary>
+      <div id="def-niveaux"></div>
+    </details>
+    <nav id="sommaire-savoirs" class="sommaire"></nav>
+    <div id="arbre-savoirs"></div>
+  </section>
+
+  <!-- ======================= FICHES ======================= -->
+  <section id="vue-fiches" class="vue">
+    <div class="outils">
+      <div class="bascule" role="group">
+        <button data-fiche="taches" class="actif">Tâches</button>
+        <button data-fiche="competences">Compétences</button>
+        <button data-fiche="activites">Activités</button>
+      </div>
+      <input id="recherche-fiches" type="search" placeholder="Rechercher…">
+    </div>
+    <div id="contenu-fiches"></div>
+  </section>
+
+  <!-- ======================= MATRICES ======================= -->
+  <section id="vue-matrices" class="vue">
+    <section class="panneau">
+      <div class="panneau-tete"><h2>Tâches × compétences</h2><span class="aide">Cliquez sur une tâche ou une compétence pour ouvrir sa fiche</span></div>
+      <div class="defile"><table id="matrice-tc" class="matrice"></table></div>
+    </section>
+    <section class="panneau">
+      <div class="panneau-tete"><h2>Compétences × savoirs</h2></div>
+      <div class="defile"><table id="matrice-cs" class="matrice"></table></div>
+    </section>
+  </section>
+
+  <!-- ======================= SUIVI ======================= -->
+  <section id="vue-suivi" class="vue">
+    <p class="avertissement">Les séances sont enregistrées dans ce navigateur, sur cet appareil. Utilisez « Exporter » pour les sauvegarder ou les transférer sur un autre appareil.</p>
+    <div class="outils">
+      <button id="btn-exporter">Exporter (JSON)</button>
+      <label class="bouton">Importer<input id="fichier-import" type="file" accept="application/json" hidden></label>
+    </div>
+    <section class="panneau">
+      <div class="panneau-tete"><h2>Séances enregistrées</h2></div>
+      <div id="liste-seances"></div>
+    </section>
+    <section class="panneau">
+      <div class="panneau-tete"><h2>Couverture du référentiel</h2><span class="aide">Nombre de séances ayant mobilisé chaque compétence et chaque tâche</span></div>
+      <div id="couverture"></div>
+    </section>
+  </section>
+</main>
+
+<button id="aller-resultats" hidden>Voir les compétences ↓</button>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- Vue imprimable de la séance -->
+<div id="impression" aria-hidden="true"></div>
+
+<script src="data/referentiel.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
