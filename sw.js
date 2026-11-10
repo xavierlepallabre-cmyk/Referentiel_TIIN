@@ -1,6 +1,6 @@
 // Service worker : met l'application en cache pour un usage hors ligne (atelier).
 // Incrémenter VERSION à chaque mise à jour des fichiers pour forcer le rafraîchissement.
-const VERSION = 'ref-tiin-v1';
+const VERSION = 'ref-tiin-v2';
 const FICHIERS = [
   './', 'index.html', 'styles.css', 'app.js', 'icon.svg',
   'manifest.webmanifest', 'data/referentiel.js'

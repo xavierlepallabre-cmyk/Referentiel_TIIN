@@ -8,6 +8,7 @@ référentiel du **Bac Pro Techniques d'Interventions sur Installations Nucléai
 | Onglet | Usage |
 |---|---|
 | **Séance atelier** | Cocher les tâches réalisées pendant une activité → compétences mobilisées classées de la plus liée à la moins liée (indicateurs de performance, données), puis savoirs associés classés, dépliables jusqu'au détail avec niveaux taxonomiques. Copier le résumé, imprimer / PDF, enregistrer la séance. Le lien de la page contient les tâches cochées (`#t=T2.3,T6.3`) : on peut le partager. |
+| **Cibler** | Choisir une ou plusieurs compétences peu travaillées → tâches qui les mobilisent, classées (nombre de compétences ciblées couvertes, puis tâches les moins pratiquées d'abord), avec indicateurs à observer et données à prévoir. Bouton « Proposer les moins travaillées » (d'après les séances enregistrées) et préparation directe d'une séance. |
 | **Savoirs** | S1 à S8 en entier, chaque sous-savoir avec son niveau (N1 à N4), filtre par niveau, recherche sans accents, définition des niveaux. |
 | **Tâches & compétences** | Fiches détaillées : tâches (données / compétences / indicateurs), compétences (tâches et savoirs liés), activités (conditions de réalisation, résultats attendus). |
 | **Matrices** | Tâches × compétences et compétences × savoirs, cliquables. |

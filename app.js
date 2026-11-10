@@ -33,6 +33,8 @@ const etat = {
   nivSeance: new Set([1, 2, 3, 4]),
   nivSavoirs: new Set([1, 2, 3, 4]),
   domFermes: new Set(),
+  cibles: new Set(),
+  selCibler: new Set(),
   fiche: 'taches',
   seanceId: null,
 };
@@ -47,6 +49,7 @@ function ouvrirVue(v) {
   $$('.onglets button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.vue === v)));
   $$('.vue').forEach(s => s.classList.toggle('active', s.id === 'vue-' + v));
   if (v === 'suivi') rendreSuivi();
+  if (v === 'cibler') { rendreChoixCibles(); rendreCibler(); }
   $('#aller-resultats').hidden = v !== 'seance' || !etat.coches.size;
   window.scrollTo({ top: 0 });
 }
@@ -407,6 +410,7 @@ function ficheCompetence(c) {
   const ts = TACHES_PAR_CP.get(c.id);
   let h = `<article class="fiche panneau" id="fiche-${c.id.replace('.', '-')}">
     <div class="entete-fiche"><span class="code">${c.id}</span><h3>${esc(c.libelle)}</h3><span class="meta">${c.groupe} · ${esc(c.groupeTitre)}</span></div>
+    <p><button data-cibler="${c.id}">Cibler cette compétence →</button></p>
     <p><b>Mobilisée dans ${ts.length} tâche(s) :</b></p><div class="puces-taches">${ts.map(t => `<span class="puce lien" data-aller="tache:${t}" title="${esc(TACHES.get(t).titre)}">${t}</span>`).join('')}</div>
     <p><b>Savoirs associés :</b></p><div class="puces-taches">${c.savoirs.map(s => `<span class="puce lien" data-aller="savoir:${s}">${s} · ${esc(DOMS.get(s).titre)}</span>`).join('')}</div>`;
   if (c.descriptifCommun) h += `<table class="table-fiche" style="margin-top:12px"><thead><tr><th>Données</th><th>Indicateurs de performance</th></tr></thead><tbody><tr><td data-col="Données">${ul(c.descriptifCommun.donnees)}</td><td data-col="Indicateurs">${ul(c.descriptifCommun.indicateurs)}</td></tr></tbody></table>`;
@@ -483,6 +487,113 @@ function rendreMatrices() {
   $('#matrice-cs').innerHTML = g + '</tbody>';
 }
 
+/* ================================================================ CIBLER */
+function comptages() {
+  const seances = lire(CLE_SEANCES, []);
+  const nCP = new Map(R.competences.map(c => [c.id, 0])), nT = new Map(R.taches.map(t => [t.id, 0]));
+  for (const s of seances) {
+    const cps = new Set();
+    (s.taches || []).forEach(t => { if (!TACHES.has(t)) return; nT.set(t, nT.get(t) + 1); TACHES.get(t).competences.forEach(x => cps.add(x.cp)); });
+    cps.forEach(c => nCP.set(c, nCP.get(c) + 1));
+  }
+  return { nCP, nT, nb: seances.length };
+}
+
+function rendreChoixCibles() {
+  const { nCP, nb } = comptages();
+  let h = '', grp = '';
+  for (const c of R.competences) {
+    if (c.groupe !== grp) { grp = c.groupe; h += `<h3>${c.groupe} · ${esc(c.groupeTitre)}</h3>`; }
+    const n = nCP.get(c.id), on = etat.cibles.has(c.id);
+    h += `<label class="cible ${on ? 'coche' : ''}"><input type="checkbox" value="${c.id}" ${on ? 'checked' : ''}>
+      <span class="code">${c.id}</span><span>${esc(c.libelle)}</span>
+      <span class="seances ${nb && !n ? 'zero' : ''}" title="Nombre de séances enregistrées ayant mobilisé cette compétence">${nb ? n + ' séance' + (n > 1 ? 's' : '') : ''}</span></label>`;
+  }
+  $('#choix-cibles').innerHTML = h;
+}
+
+function rendreCibler() {
+  const cibles = [...etat.cibles].sort(triCode);
+  $('#vide-cibler').hidden = cibles.length > 0;
+  $('#bloc-cibler').hidden = cibles.length === 0;
+  if (!cibles.length) return;
+  const { nT, nb } = comptages();
+  const props = R.taches.map(t => {
+    const cps = t.competences.map(x => x.cp);
+    return { t, couvre: cibles.filter(c => cps.includes(c)), autres: cps.filter(c => !etat.cibles.has(c)) };
+  }).filter(p => p.couvre.length)
+    .sort((a, b) => b.couvre.length - a.couvre.length || nT.get(a.t.id) - nT.get(b.t.id) || triCode(a.t.id, b.t.id));
+  // ne garder sélectionnées que les tâches encore proposées
+  for (const id of [...etat.selCibler]) if (!props.some(p => p.t.id === id)) etat.selCibler.delete(id);
+  const toutes = props.filter(p => p.couvre.length === cibles.length).length;
+  $('#resume-cibler').textContent = `${props.length} tâche(s) mobilisent au moins une des ${cibles.length} compétence(s) ciblée(s)` +
+    (cibles.length > 1 ? ` · ${toutes} les mobilisent toutes` : '');
+  const ouverts = new Set($$('#liste-cibler details[open]').map(d => d.dataset.cle));
+  $('#liste-cibler').innerHTML = props.map(({ t, couvre, autres }) => {
+    const n = nT.get(t.id);
+    const blocs = couvre.map(cp => {
+      const c = COMPS.get(cp);
+      const e = t.competences.find(x => x.cp === cp);
+      const ind = c.descriptifCommun ? c.descriptifCommun.indicateurs : e.indicateurs;
+      const don = c.descriptifCommun ? c.descriptifCommun.donnees : e.donnees;
+      return `<div class="bloc-cp"><b>${cp}</b> ${esc(c.libelle)}
+        <h4>Indicateurs de performance à observer</h4><ul>${ind.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+        <h4>Données / ressources à prévoir</h4><ul>${don.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`;
+    }).join('');
+    return `<li class="ligne-classement prop"><details data-cle="${t.id}" ${ouverts.has(t.id) ? 'open' : ''}>
+      <summary><input type="checkbox" class="sel" value="${t.id}" ${etat.selCibler.has(t.id) ? 'checked' : ''} title="Sélectionner pour préparer une séance">
+        <span class="code">${t.id}</span>
+        <span>${esc(t.titre)}<br><span class="aide">${t.activite} · ${esc(ACTS.get(t.activite).titre)} · autonomie ${t.autonomie}${nb ? ` · pratiquée ${n} fois` : ''}</span>
+          <span class="couvre">${couvre.map(c => `<span class="puce cible-ok" title="${esc(COMPS.get(c).libelle)}">${c}</span>`).join('')}${autres.map(c => `<span class="puce" title="${esc(COMPS.get(c).libelle)}">${c}</span>`).join('')}</span></span>
+        ${jauge(couvre.length, cibles.length, `${couvre.length}/${cibles.length} ciblée${cibles.length > 1 ? 's' : ''}`)}</summary>
+      <div class="detail">${blocs}<p><span class="puce lien" data-aller="tache:${t.id}">Voir la fiche complète de ${t.id}</span></p></div></details></li>`;
+  }).join('');
+  majBoutonSeanceCiblee();
+}
+function majBoutonSeanceCiblee() {
+  const n = etat.selCibler.size;
+  $('#btn-cibles-seance').textContent = n ? `Préparer une séance avec ${n} tâche${n > 1 ? 's' : ''}` : 'Cochez des tâches pour préparer une séance';
+  $('#btn-cibles-seance').disabled = !n;
+}
+
+function ciblerCP(ids, ajouter = false) {
+  if (!ajouter) etat.cibles.clear();
+  ids.forEach(id => etat.cibles.add(id));
+  ouvrirVue('cibler');
+}
+
+$('#choix-cibles').addEventListener('change', e => {
+  const v = e.target.value; e.target.checked ? etat.cibles.add(v) : etat.cibles.delete(v);
+  e.target.closest('.cible').classList.toggle('coche', e.target.checked);
+  rendreCibler();
+});
+$('#liste-cibler').addEventListener('click', e => { if (e.target.classList.contains('sel')) e.stopPropagation(); });
+$('#liste-cibler').addEventListener('change', e => {
+  if (!e.target.classList.contains('sel')) return;
+  e.target.checked ? etat.selCibler.add(e.target.value) : etat.selCibler.delete(e.target.value);
+  majBoutonSeanceCiblee();
+});
+$('#btn-cibles-vider').addEventListener('click', () => { etat.cibles.clear(); etat.selCibler.clear(); rendreChoixCibles(); rendreCibler(); });
+$('#btn-moins-travaillees').addEventListener('click', () => {
+  const { nCP, nb } = comptages();
+  if (!nb) return toast("Aucune séance enregistrée : impossible de savoir ce qui est peu travaillé.");
+  const min = Math.min(...nCP.values());
+  etat.cibles = new Set([...nCP].filter(([, n]) => n === min).map(([c]) => c));
+  rendreChoixCibles(); rendreCibler();
+  toast(`${etat.cibles.size} compétence(s) travaillée(s) ${min} fois sélectionnée(s).`);
+});
+$('#btn-cibles-seance').addEventListener('click', () => {
+  if (!etat.selCibler.size) return;
+  if (etat.coches.size && !confirm('Remplacer les tâches actuellement cochées dans la séance atelier ?')) return;
+  chargerSeance({ titre: 'Séance ciblée : ' + [...etat.cibles].sort(triCode).join(', '), date: aujourdhui(), taches: [...etat.selCibler] });
+  ouvrirVue('seance');
+  toast('Séance préparée : complétez l\'intitulé puis enregistrez.');
+});
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-cibler]'); if (!b) return;
+  e.preventDefault(); ciblerCP([b.dataset.cibler]);
+});
+
 /* ================================================================= SUIVI */
 function rendreSuivi() {
   const seances = lire(CLE_SEANCES, []).sort((a, b) => (b.date || '').localeCompare(a.date || ''));
@@ -500,7 +611,7 @@ function rendreSuivi() {
   const max = Math.max(1, seances.length);
   const ligne = (code, lib, n, cible) => `<div class="couv ${n ? '' : 'zero'}"><span class="puce lien" data-aller="${cible}">${code}</span><span class="lib">${jauge(n, max, '')}<span class="aide">${esc(lib)}</span></span><span class="n">${n}</span></div>`;
   $('#couverture').innerHTML = `<div class="couv-colonnes">
-    <div><h3>Compétences</h3>${R.competences.map(c => ligne(c.id, c.libelle, nCP.get(c.id), 'cp:' + c.id)).join('')}</div>
+    <div><h3>Compétences</h3><p class="aide">Cliquez sur « cibler » pour obtenir les tâches qui travaillent une compétence.</p>${R.competences.map(c => ligne(c.id, c.libelle, nCP.get(c.id), 'cp:' + c.id).replace('</div>', ` <button class="discret mini" data-cibler="${c.id}">cibler</button></div>`)).join('')}</div>
     <div><h3>Tâches</h3>${R.taches.map(t => ligne(t.id, t.titre, nT.get(t.id), 'tache:' + t.id)).join('')}</div></div>`;
 }
 $('#liste-seances').addEventListener('click', e => {

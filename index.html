@@ -21,6 +21,7 @@
   </div>
   <nav class="onglets" role="tablist">
     <button role="tab" data-vue="seance" aria-selected="true">Séance atelier</button>
+    <button role="tab" data-vue="cibler">Cibler</button>
     <button role="tab" data-vue="savoirs">Savoirs</button>
     <button role="tab" data-vue="fiches">Tâches &amp; compétences</button>
     <button role="tab" data-vue="matrices">Matrices</button>
@@ -74,6 +75,35 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- ======================= CIBLER ======================= -->
+  <section id="vue-cibler" class="vue">
+    <section class="panneau">
+      <div class="panneau-tete">
+        <h2>Compétences à travailler</h2>
+        <span class="aide">Choisissez une ou plusieurs compétences : les tâches qui les mobilisent s'affichent dessous.</span>
+      </div>
+      <div class="outils" style="margin-bottom:8px">
+        <button id="btn-moins-travaillees">Proposer les moins travaillées</button>
+        <button id="btn-cibles-vider" class="discret">Effacer la sélection</button>
+      </div>
+      <div id="choix-cibles" class="choix-cibles"></div>
+    </section>
+    <div id="vide-cibler" class="vide">
+      <p><strong>Sélectionnez au moins une compétence.</strong></p>
+      <p>Les tâches sont classées selon le nombre de compétences ciblées qu'elles mobilisent. À égalité, la tâche la moins pratiquée lors des séances enregistrées passe en premier.</p>
+    </div>
+    <section id="bloc-cibler" class="panneau" hidden>
+      <div class="panneau-tete">
+        <h2>Tâches proposées</h2>
+        <span id="resume-cibler" class="aide"></span>
+      </div>
+      <div class="outils" style="margin-bottom:6px">
+        <button id="btn-cibles-seance" class="primaire">Préparer une séance avec les tâches sélectionnées</button>
+      </div>
+      <ol id="liste-cibler" class="classement"></ol>
+    </section>
   </section>
 
   <!-- ======================= SAVOIRS ======================= -->

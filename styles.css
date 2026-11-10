@@ -195,7 +195,7 @@ mark { background: var(--jaune); color: #000; border-radius: 3px; padding: 0 1px
 .seance-enr:first-child { border-top: 0; }
 .seance-enr .date { color: var(--texte-2); font-variant-numeric: tabular-nums; }
 .seance-enr .boutons { display: flex; gap: 6px; }
-.couv { display: grid; grid-template-columns: 70px 1fr 50px; gap: 8px; align-items: center; padding: 3px 0; font-size: .88rem; }
+.couv { display: grid; grid-template-columns: 70px 1fr 40px 64px; gap: 8px; align-items: center; padding: 3px 0; font-size: .88rem; }
 .couv.zero .lib { color: var(--texte-2); }
 .couv .n { text-align: right; font-variant-numeric: tabular-nums; }
 .couv-colonnes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -252,3 +252,26 @@ mark { background: var(--jaune); color: #000; border-radius: 3px; padding: 0 1px
   #impression .niv { border: 1px solid #888; }
   #impression tr { break-inside: avoid; }
 }
+
+/* ---------- Cibler ---------- */
+.choix-cibles { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 4px 16px; }
+.choix-cibles h3 { grid-column: 1 / -1; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; color: var(--texte-2); margin: 8px 0 0; }
+.cible { display: grid; grid-template-columns: 22px 48px 1fr auto; gap: 6px; align-items: start; padding: 6px; border-radius: 8px; cursor: pointer; font-size: .92rem; }
+.cible:hover { background: var(--surface-2); }
+.cible.coche { background: var(--accent-clair); }
+.cible input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--accent-2); }
+.cible .code { font-weight: 700; color: var(--accent-2); }
+.cible .seances { font-size: .75rem; color: var(--texte-2); white-space: nowrap; }
+.cible .seances.zero { color: #b5452f; font-weight: 600; }
+.prop > details > summary { grid-template-columns: 30px 54px 1fr minmax(120px, 190px); }
+.prop .sel { width: 18px; height: 18px; accent-color: var(--accent-2); }
+.couvre { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+.puce.cible-ok { background: var(--accent-2); color: #fff; border-color: var(--accent-2); }
+.bloc-cp { border-left: 3px solid var(--accent-2); padding-left: 10px; margin: 8px 0; }
+@media (max-width: 600px) {
+  .prop > details > summary { grid-template-columns: 26px 46px 1fr; }
+  .prop .jauge { grid-column: 3; }
+}
+
+button.mini { min-height: 28px; padding: 2px 10px; font-size: .8rem; }
+button:disabled { opacity: .55; cursor: default; }
