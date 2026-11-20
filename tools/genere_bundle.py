@@ -13,7 +13,8 @@ ac = json.loads((DATA / "activites_competences.json").read_text(encoding="utf-8"
 sv = json.loads((DATA / "savoirs.json").read_text(encoding="utf-8"))
 tp = json.loads((DATA / "tp.json").read_text(encoding="utf-8"))
 mes = json.loads((DATA / "mes_tp.json").read_text(encoding="utf-8"))
-bundle = {**ac, "savoirs": sv, "tp": tp, "mesTp": mes}
+hl = json.loads((DATA / "hors_lycee.json").read_text(encoding="utf-8"))
+bundle = {**ac, "savoirs": sv, "tp": tp, "mesTp": mes, "horsLycee": hl}
 js = "// Fichier généré par tools/genere_bundle.py — ne pas modifier à la main.\n"
 js += "window.REFERENTIEL = " + json.dumps(bundle, ensure_ascii=False, separators=(",", ":")) + ";\n"
 (DATA / "referentiel.js").write_text(js, encoding="utf-8")

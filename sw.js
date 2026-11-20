@@ -1,9 +1,9 @@
 // Service worker : met l'application en cache pour un usage hors ligne (atelier).
 // À chaque mise à jour : incrémenter VERSION ici ET le suffixe ?v= dans index.html.
-const VERSION = 'ref-tiin-v5';
+const VERSION = 'ref-tiin-v6';
 const FICHIERS = [
-  './', 'index.html', 'styles.css?v=5', 'app.js?v=5', 'icon.svg',
-  'manifest.webmanifest', 'data/referentiel.js?v=5'
+  './', 'index.html', 'styles.css?v=6', 'app.js?v=6', 'icon.svg',
+  'manifest.webmanifest', 'data/referentiel.js?v=6'
 ];
 
 self.addEventListener('install', e => {

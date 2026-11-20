@@ -1,0 +1,12 @@
+{
+ "commentaire": "Tâches travaillées en dehors du lycée (période en entreprise ou formation à l'INSTN). Préciser le lieu par tâche si besoin : \"entreprise\", \"INSTN\" ou \"entreprise ou INSTN\".",
+ "taches": {
+  "T1.3": "entreprise ou INSTN",
+  "T2.3": "entreprise ou INSTN",
+  "T2.5": "entreprise ou INSTN",
+  "T3.2": "entreprise ou INSTN",
+  "T4.1": "entreprise ou INSTN",
+  "T5.3": "entreprise ou INSTN",
+  "T5.5": "entreprise ou INSTN"
+ }
+}

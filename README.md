@@ -27,6 +27,7 @@ référentiel du **Bac Pro Techniques d'Interventions sur Installations Nucléai
 * `data/savoirs.json` : définitions des niveaux, savoirs S1-S7 en arbre (niveau par élément), S8 en
   tableau capacités / connaissances / exemples (le référentiel n'y donne pas de colonne de niveaux).
 * `data/mes_tp.json` : catalogue de TP (extrait de `Cartographie_41_TP_TIIN_referentiel_prerequis.docx` par `tools/extraction/extrait_mestp.py` ; corrigeable à la main).
+* `data/hors_lycee.json` : tâches travaillées hors lycée (entreprise / INSTN) — elles ne comptent pas comme des trous de couverture.
 * `data/tp.json` : banque d'idées de TP (générée par `python3 tools/tp_source.py`).
 * `data/referentiel.js` : **généré** à partir des deux JSON — après toute correction :
 

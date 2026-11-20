@@ -14,6 +14,8 @@ const triCode = (a, b) => a.localeCompare(b, 'fr', { numeric: true });
 /* ---------------------------------------------------------------- Index */
 const TACHES = new Map(R.taches.map(t => [t.id, t]));
 const COMPS = new Map(R.competences.map(c => [c.id, c]));
+const HORS = R.horsLycee?.taches || {};
+const badgeHors = t => HORS[t] ? `<span class="hors-lycee" title="Tâche travaillée hors lycée">${esc(HORS[t])}</span>` : '';
 const ACTS = new Map(R.activites.map(a => [a.id, a]));
 const DOMS = new Map(R.savoirs.domaines.map(d => [d.id, d]));
 const TACHES_PAR_CP = new Map(R.competences.map(c => [c.id, []]));
@@ -160,7 +162,7 @@ function rendreListeTaches() {
       ${ts.map(t => `<label class="tache ${etat.coches.has(t.id) ? 'coche' : ''}">
         <input type="checkbox" value="${t.id}" ${etat.coches.has(t.id) ? 'checked' : ''}>
         <span class="id">${t.id}</span>
-        <span>${esc(t.titre)} <span class="aut" title="${esc(R.autonomie[t.autonomie])}">· autonomie ${t.autonomie}</span></span>
+        <span>${esc(t.titre)} <span class="aut" title="${esc(R.autonomie[t.autonomie])}">· autonomie ${t.autonomie}</span> ${badgeHors(t.id)}</span>
       </label>`).join('')}
     </details>`;
   }).join('') || '<p class="aide">Aucune tâche ne correspond.</p>';
@@ -395,7 +397,7 @@ const ulSub = arr => '<ul>' + arr.map(x => `<li>${esc(x.t)}${x.sub.length ? ul(x
 function ficheTache(t) {
   return `<article class="fiche panneau" id="fiche-${t.id}">
     <div class="entete-fiche"><span class="code">${t.id}</span><h3>${esc(t.titre)}</h3>
-      <span class="meta">${t.activite} · ${esc(ACTS.get(t.activite).titre)} · Autonomie ${t.autonomie} : ${esc(R.autonomie[t.autonomie])}</span></div>
+      <span class="meta">${t.activite} · ${esc(ACTS.get(t.activite).titre)} · Autonomie ${t.autonomie} : ${esc(R.autonomie[t.autonomie])}</span>${HORS[t.id] ? ' <span class="hors-lycee">Travaillée hors lycée : ' + esc(HORS[t.id]) + '</span>' : ''}</div>
     <table class="table-fiche"><thead><tr><th>Compétence</th><th>Données</th><th>Indicateurs de performance</th></tr></thead><tbody>
     ${t.competences.map(tc => {
       const c = COMPS.get(tc.cp), commun = c.descriptifCommun;
@@ -404,7 +406,7 @@ function ficheTache(t) {
         <td data-col="Indicateurs de performance">${commun ? '<span class="aide">Voir la fiche CP4.5</span>' : ul(tc.indicateurs)}</td></tr>`;
     }).join('')}</tbody></table>
     ${(() => { const m = MES.filter(tp => tp.taches.includes(t.id)), l = TPS.filter(tp => tp.taches.includes(t.id));
-      return `<p class="aide">Mes TP : ${m.length ? m.map(tp => `<span class="puce lien" data-aller="montp:${tp.id}" title="${esc(tp.titre)}">${tp.id}</span>`).join(' ') : '<b>aucun</b>'}${l.length ? ` · Idées : ${l.map(tp => `<span class="puce lien" data-aller="tp:${tp.id}" title="${esc(tp.titre)}">${tp.id}</span>`).join(' ')}` : ''}</p>`; })()}
+      return `<p class="aide">Mes TP : ${m.length ? m.map(tp => `<span class="puce lien" data-aller="montp:${tp.id}" title="${esc(tp.titre)}">${tp.id}</span>`).join(' ') : (HORS[t.id] ? 'aucun (tâche travaillée hors lycée)' : '<b>aucun</b>')}${l.length ? ` · Idées : ${l.map(tp => `<span class="puce lien" data-aller="tp:${tp.id}" title="${esc(tp.titre)}">${tp.id}</span>`).join(' ')}` : ''}</p>`; })()}
     <p class="aide">Ajouter à la séance : <button class="discret" data-ajout="${t.id}">${etat.coches.has(t.id) ? '✓ déjà cochée' : '+ cocher cette tâche'}</button></p>
   </article>`;
 }
@@ -544,14 +546,17 @@ function rendreCouvertureMes() {
   const nT = new Map(R.taches.map(t => [t.id, []])), nC = new Map(R.competences.map(c => [c.id, []]));
   MES.forEach(tp => { tp.taches.forEach(t => nT.get(t).push(tp.id)); tp.cpPrincipales.forEach(c => nC.get(c)?.push(tp.id)); });
   const max = Math.max(...[...nC.values()].map(v => v.length), 1), maxT = Math.max(...[...nT.values()].map(v => v.length), 1);
-  const trous = R.taches.filter(t => !nT.get(t.id).length);
+  const trous = R.taches.filter(t => !nT.get(t.id).length && !HORS[t.id]);
+  const dehors = R.taches.filter(t => !nT.get(t.id).length && HORS[t.id]);
   const idees = t => TPS.filter(i => i.taches.includes(t)).map(i => `<span class="puce lien" data-aller="tp:${i.id}" title="${esc(i.titre)}">${i.id}</span>`).join(' ');
   $('#couverture-mes').innerHTML = `
     ${trous.length ? `<div class="trous"><b>${trous.length} tâche(s) du référentiel ne sont visées par aucun de tes TP :</b>
-      ${trous.map(t => `<div class="couv zero"><span class="puce lien" data-aller="tache:${t.id}">${t.id}</span><span class="lib">${esc(t.titre)}</span><span></span><span class="aide">idées : ${idees(t.id) || '—'}</span></div>`).join('')}</div>` : '<p>Toutes les tâches du référentiel sont visées par au moins un TP.</p>'}
+      ${trous.map(t => `<div class="couv zero"><span class="puce lien" data-aller="tache:${t.id}">${t.id}</span><span class="lib">${esc(t.titre)}</span><span></span><span class="aide">idées : ${idees(t.id) || '—'}</span></div>`).join('')}</div>` : '<p>✓ Toutes les tâches du référentiel sont couvertes : par tes TP au lycée, ou hors lycée.</p>'}
+    ${dehors.length ? `<div class="trous dehors"><b>${dehors.length} tâche(s) travaillée(s) hors lycée (entreprise / INSTN) :</b>
+      ${dehors.map(t => `<div class="couv"><span class="puce lien" data-aller="tache:${t.id}">${t.id}</span><span class="lib">${esc(t.titre)}</span><span></span>${badgeHors(t.id)}</div>`).join('')}</div>` : ''}
     <div class="couv-colonnes" style="margin-top:12px">
       <div><h3>Compétences principales (nb de TP)</h3>${R.competences.map(c => { const l = nC.get(c.id); return `<div class="couv ${l.length ? '' : 'zero'}"><span class="puce lien" data-aller="cp:${c.id}">${c.id}</span><span class="lib">${jauge(l.length, max, '')}<span class="aide">${esc(c.libelle)}</span></span><span class="n">${l.length}</span><button class="discret mini" data-cibler="${c.id}">cibler</button></div>`; }).join('')}</div>
-      <div><h3>Tâches (nb de TP)</h3>${R.taches.map(t => { const l = nT.get(t.id); return `<div class="couv ${l.length ? '' : 'zero'}"><span class="puce lien" data-aller="tache:${t.id}">${t.id}</span><span class="lib">${jauge(l.length, maxT, '')}<span class="aide" title="${l.join(', ')}">${esc(t.titre)}</span></span><span class="n">${l.length}</span><span></span></div>`; }).join('')}</div>
+      <div><h3>Tâches (nb de TP)</h3>${R.taches.map(t => { const l = nT.get(t.id); return `<div class="couv ${l.length ? '' : 'zero'}"><span class="puce lien" data-aller="tache:${t.id}">${t.id}</span><span class="lib">${jauge(l.length, maxT, '')}<span class="aide" title="${l.join(', ')}">${esc(t.titre)}</span></span><span class="n">${l.length}</span><span>${!l.length && HORS[t.id] ? '<span class="hors-lycee" title="' + esc(HORS[t.id]) + '">hors lycée</span>' : ''}</span></div>`; }).join('')}</div>
     </div>`;
 }
 
@@ -689,7 +694,7 @@ function rendreCibler() {
     return `<li class="ligne-classement prop"><details data-cle="${t.id}" ${ouverts.has(t.id) ? 'open' : ''}>
       <summary><input type="checkbox" class="sel" value="${t.id}" ${etat.selCibler.has(t.id) ? 'checked' : ''} title="Sélectionner pour préparer une séance">
         <span class="code">${t.id}</span>
-        <span>${esc(t.titre)}<br><span class="aide">${t.activite} · ${esc(ACTS.get(t.activite).titre)} · autonomie ${t.autonomie}${nb ? ` · pratiquée ${n} fois` : ''}</span>
+        <span>${esc(t.titre)} ${badgeHors(t.id)}<br><span class="aide">${t.activite} · ${esc(ACTS.get(t.activite).titre)} · autonomie ${t.autonomie}${nb ? ` · pratiquée ${n} fois` : ''}</span>
           <span class="couvre">${couvre.map(c => `<span class="puce cible-ok" title="${esc(COMPS.get(c).libelle)}">${c}</span>`).join('')}${autres.map(c => `<span class="puce" title="${esc(COMPS.get(c).libelle)}">${c}</span>`).join('')}</span></span>
         ${jauge(couvre.length, cibles.length, `${couvre.length}/${cibles.length} ciblée${cibles.length > 1 ? 's' : ''}`)}</summary>
       <div class="detail">${blocs}<p><span class="puce lien" data-aller="tache:${t.id}">Voir la fiche complète de ${t.id}</span></p></div></details></li>`;
