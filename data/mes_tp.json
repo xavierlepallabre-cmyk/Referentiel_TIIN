@@ -1,0 +1,984 @@
+{
+ "source": "Cartographie_41_TP_TIIN_referentiel_prerequis.docx (catalogue v8)",
+ "avertissement": "Rattachements indicatifs (matrice catalogue v8). Compétences principales : potentielles, à confirmer par les gestes et preuves du dossier final. Les tâches conditionnelles ne sont acquises que si effectivement réalisées. Simulation et VR : pas de validation de gestes en milieu nucléaire réel.",
+ "tp": [
+  {
+   "id": "TP01",
+   "titre": "Dessin technique, traçage et fabrication d’un chasse-cône",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A2",
+    "A6"
+   ],
+   "taches": [
+    "T1.11",
+    "T2.1",
+    "T6.5"
+   ],
+   "cpPrincipales": [
+    "CP2.3",
+    "CP4.1",
+    "CP5.2",
+    "CP5.3"
+   ],
+   "prerequis": "S1 — Vues, cotation, traçage, perçage et ajustage ; S4 — sécurité machines",
+   "statut": null
+  },
+  {
+   "id": "TP02",
+   "titre": "Métrologie : contrôles croisés et pièces de pompes",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.14",
+    "T1.15",
+    "T6.4"
+   ],
+   "cpPrincipales": [
+    "CP3.1",
+    "CP5.2"
+   ],
+   "prerequis": "S1 — Cotation, tolérances, lecture des instruments de mesure",
+   "statut": null
+  },
+  {
+   "id": "TP03",
+   "titre": "Découverte de trois systèmes industriels automatisés",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1"
+   ],
+   "taches": [
+    "T1.5"
+   ],
+   "cpPrincipales": [
+    "CP2.3"
+   ],
+   "prerequis": "S2 — Fonctions techniques, actionneurs, capteurs ; S4 — sécurité atelier",
+   "statut": null
+  },
+  {
+   "id": "TP04",
+   "titre": "Analyse des chaînes d’énergie et d’information",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1"
+   ],
+   "taches": [
+    "T1.11"
+   ],
+   "cpPrincipales": [
+    "CP2.3"
+   ],
+   "prerequis": "S2 — Chaînes d’énergie et d’information, schématisation",
+   "statut": null
+  },
+  {
+   "id": "TP05",
+   "titre": "Démontage de vérins pneumatiques et échange de gammes",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.8",
+    "T1.9",
+    "T1.10",
+    "T1.11",
+    "T6.1",
+    "T6.5"
+   ],
+   "cpPrincipales": [
+    "CP1.1",
+    "CP2.3",
+    "CP3.1",
+    "CP4.5"
+   ],
+   "prerequis": "S1 — Liaisons, étanchéité ; S2 — vérin double effet ; S3 — gamme ; S4 — dépressurisation",
+   "statut": null
+  },
+  {
+   "id": "TP06",
+   "titre": "Maintenance préventive d’un vérin : joints, métrologie et écarts",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A2"
+   ],
+   "taches": [
+    "T1.2",
+    "T1.8",
+    "T1.14",
+    "T2.8"
+   ],
+   "cpPrincipales": [
+    "CP3.1",
+    "CP4.5",
+    "CP5.2"
+   ],
+   "prerequis": "S1 — Joints, états de surface, métrologie ; S3 — maintenance préventive",
+   "statut": null
+  },
+  {
+   "id": "TP07",
+   "titre": "ECOLBROYEUR : remplacement des couteaux sur rotor cannelé",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.11",
+    "T6.1",
+    "T6.3"
+   ],
+   "cpPrincipales": [
+    "CP1.1",
+    "CP2.3",
+    "CP4.5",
+    "CP5.3"
+   ],
+   "prerequis": "S1 — Cannelures, maintien axial, assemblages ; S3 — échange standard ; S4 — consignation",
+   "statut": null
+  },
+  {
+   "id": "TP08",
+   "titre": "ATI-6510 : serrage contrôlé et allongement des vis",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.14",
+    "T1.15",
+    "T6.4"
+   ],
+   "cpPrincipales": [
+    "CP3.1",
+    "CP5.2"
+   ],
+   "prerequis": "S1 — Visserie, couple, traction et allongement ; S3 — serrage contrôlé",
+   "statut": null
+  },
+  {
+   "id": "TP09",
+   "titre": "ATI-6510 : joint d’étanchéité et écrasement central",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.11",
+    "T1.15",
+    "T6.4"
+   ],
+   "cpPrincipales": [
+    "CP5.2"
+   ],
+   "prerequis": "S1 — Étanchéité statique, compression du joint, serrage progressif",
+   "statut": null
+  },
+  {
+   "id": "TP10",
+   "titre": "DMS : alignement moteur-pompe au comparateur",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.11",
+    "T6.4",
+    "T6.5"
+   ],
+   "cpPrincipales": [
+    "CP4.5",
+    "CP5.3"
+   ],
+   "prerequis": "S1 — Guidage, accouplement, défauts d’alignement ; S3 — comparateur",
+   "statut": null
+  },
+  {
+   "id": "TP11",
+   "titre": "Câblage de circuits pneumatiques simples sur platine Festo",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A2",
+    "A6"
+   ],
+   "taches": [
+    "T1.11",
+    "T2.1",
+    "T6.5"
+   ],
+   "cpPrincipales": [
+    "CP2.3",
+    "CP4.1",
+    "CP5.3"
+   ],
+   "prerequis": "S2 — Symboles pneumatiques, distributeurs, vérins ; S4 — pression",
+   "statut": null
+  },
+  {
+   "id": "TP12",
+   "titre": "Commande électropneumatique séquentielle à deux vérins",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A2",
+    "A6"
+   ],
+   "taches": [
+    "T1.11",
+    "T2.1",
+    "T6.5"
+   ],
+   "cpPrincipales": [
+    "CP2.3",
+    "CP4.1",
+    "CP5.3"
+   ],
+   "prerequis": "S2 — Pneumatique, capteurs, logique séquentielle et relais ; TP11",
+   "statut": null
+  },
+  {
+   "id": "TP13",
+   "titre": "Commande d’un contacteur et auto-maintien sur platine électrique",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A2",
+    "A6"
+   ],
+   "taches": [
+    "T1.11",
+    "T2.1",
+    "T6.5"
+   ],
+   "cpPrincipales": [
+    "CP2.3",
+    "CP4.1",
+    "CP5.3"
+   ],
+   "prerequis": "S2 — Schémas électriques, contacteur, contacts NO/NF ; S4 — risque électrique",
+   "statut": null
+  },
+  {
+   "id": "TP14",
+   "titre": "Commande d’un inverseur de sens par deux contacteurs — essais de commande",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A2",
+    "A6"
+   ],
+   "taches": [
+    "T1.11",
+    "T2.1",
+    "T6.5"
+   ],
+   "cpPrincipales": [
+    "CP2.3",
+    "CP4.1",
+    "CP5.3"
+   ],
+   "prerequis": "S2 — Auto-maintien, interverrouillage, inversion de sens ; TP13",
+   "statut": null
+  },
+  {
+   "id": "TP15",
+   "titre": "Changement physique de format sur ECOLTRI et validation",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.11",
+    "T1.12",
+    "T1.14",
+    "T6.5"
+   ],
+   "cpPrincipales": [
+    "CP3.1",
+    "CP4.5",
+    "CP5.2",
+    "CP5.3"
+   ],
+   "prerequis": "S1 — Liaisons et réglages ; S2 — cycle automatisé ; S3 — changement de format",
+   "statut": null
+  },
+  {
+   "id": "TP16",
+   "titre": "Maintenance préventive d’un système industriel à partir de sa documentation",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.8",
+    "T1.10",
+    "T6.1",
+    "T6.5"
+   ],
+   "cpPrincipales": [
+    "CP1.1",
+    "CP2.3",
+    "CP3.1",
+    "CP4.5",
+    "CP5.2"
+   ],
+   "prerequis": "S3/S5 — Maintenance préventive, gamme, périodicité et traçabilité ; S4 — consignation",
+   "statut": null
+  },
+  {
+   "id": "TP17",
+   "titre": "Dosicase — influence de la distance sur le débit de dose simulé",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A5"
+   ],
+   "taches": [
+    "T1.14",
+    "T1.15",
+    "T5.2"
+   ],
+   "cpPrincipales": [
+    "CP3.1",
+    "CP5.1"
+   ],
+   "prerequis": "S8 — Débit de dose, unités, distance, loi en 1/d² (modèle ponctuel)",
+   "statut": null
+  },
+  {
+   "id": "TP18",
+   "titre": "Dosicase — suivi dosimétrique individuel et optimisation d’intervention",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A5",
+    "A6"
+   ],
+   "taches": [
+    "T1.4",
+    "T1.9",
+    "T1.13",
+    "T1.14",
+    "T5.2",
+    "T6.2"
+   ],
+   "cpPrincipales": [
+    "CP3.1",
+    "CP4.1",
+    "CP5.1"
+   ],
+   "prerequis": "S8 — Dose intégrée, durée, débit de dose, ALARA ; TP17",
+   "statut": null
+  },
+  {
+   "id": "TP19",
+   "titre": "Inventaire, maintenance et remise en état de l’atelier par secteurs",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A2",
+    "A6"
+   ],
+   "taches": [
+    "T1.2",
+    "T1.10",
+    "T2.2",
+    "T2.4",
+    "T6.2"
+   ],
+   "cpPrincipales": [
+    "CP2.3",
+    "CP3.1",
+    "CP4.1",
+    "CP5.2"
+   ],
+   "prerequis": "S5 — Inventaire, disponibilité, organisation et suivi ; S4 — stockage sûr",
+   "statut": null
+  },
+  {
+   "id": "TP20",
+   "titre": "Préparation documentaire d’une intervention nucléaire simulée sur vanne",
+   "annee": "1re",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A3",
+    "A6"
+   ],
+   "taches": [
+    "T1.1",
+    "T1.5",
+    "T3.1",
+    "T6.1"
+   ],
+   "cpPrincipales": [
+    "CP1.1",
+    "CP1.2",
+    "CP2.1",
+    "CP2.2",
+    "CP2.3",
+    "CP4.3"
+   ],
+   "prerequis": "S6/S7 — Documents d’intervention, exploitants, zonage ; S8 — dose et ALARA ; S4 — risques",
+   "statut": null
+  },
+  {
+   "id": "TP21",
+   "titre": "Reconstitution d’un dossier technique à partir de deux compresseurs à pistons",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.1",
+    "T1.10",
+    "T6.1"
+   ],
+   "cpPrincipales": [
+    "CP1.1",
+    "CP2.3",
+    "CP3.1"
+   ],
+   "prerequis": "S1/S2 — Compression à pistons, transmission, lubrification, lecture de plaques ; S5 — dossier technique",
+   "statut": null
+  },
+  {
+   "id": "TP22",
+   "titre": "Maintenance préventive de deux compresseurs à pistons",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.7",
+    "T1.11",
+    "T6.3",
+    "T6.5"
+   ],
+   "cpPrincipales": [
+    "CP4.5",
+    "CP5.2",
+    "CP5.3"
+   ],
+   "prerequis": "S3/S5 — Préventif et gamme ; S2 — fonctionnement compresseur ; S4 — pression ; TP21",
+   "statut": null
+  },
+  {
+   "id": "TP23",
+   "titre": "Maintenance mécanique d’un réducteur industriel",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.7",
+    "T1.11",
+    "T6.3",
+    "T6.4"
+   ],
+   "cpPrincipales": [
+    "CP4.5",
+    "CP5.2",
+    "CP5.3"
+   ],
+   "prerequis": "S1 — Engrenages, roulements, étanchéité, lubrification ; S3 — démontage/remontage",
+   "statut": null
+  },
+  {
+   "id": "TP24",
+   "titre": "Contrôle qualité d’un assemblage boulonné instrumenté",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.11",
+    "T1.14",
+    "T6.4"
+   ],
+   "cpPrincipales": [
+    "CP3.1",
+    "CP4.5",
+    "CP5.2",
+    "CP5.3"
+   ],
+   "prerequis": "S1 — Assemblages boulonnés, allongement et compression ; TP08/09",
+   "statut": null
+  },
+  {
+   "id": "TP25",
+   "titre": "Diagnostic et correction d’un désalignement par analyse vibratoire",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.14",
+    "T1.15",
+    "T6.4"
+   ],
+   "cpPrincipales": [
+    "CP3.1",
+    "CP4.5"
+   ],
+   "prerequis": "S1 — Accouplements, alignement ; S3/S5 — mesures vibratoires, fréquence de rotation ; TP10",
+   "statut": null
+  },
+  {
+   "id": "TP26",
+   "titre": "Réalisation et contrôle de circuits hydrauliques sur SHCO 4.0",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A2",
+    "A6"
+   ],
+   "taches": [
+    "T1.11",
+    "T2.1",
+    "T6.5"
+   ],
+   "cpPrincipales": [
+    "CP2.3",
+    "CP4.1",
+    "CP5.3"
+   ],
+   "prerequis": "S2 — Symboles, débit, pression, distributeurs et limiteur ; S4 — énergie hydraulique",
+   "statut": null
+  },
+  {
+   "id": "TP27",
+   "titre": "Maintenance mécanique de robinetterie industrielle",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A2",
+    "A4",
+    "A6"
+   ],
+   "taches": [
+    "T1.7",
+    "T1.11",
+    "T2.6",
+    "T4.2",
+    "T6.3",
+    "T6.4"
+   ],
+   "cpPrincipales": [
+    "CP4.1",
+    "CP4.5",
+    "CP5.2",
+    "CP5.3"
+   ],
+   "prerequis": "S1 — Étanchéité, assemblages ; S2 — fonctions des robinets ; S4 — pression et manutention",
+   "statut": null
+  },
+  {
+   "id": "TP28",
+   "titre": "Ronde de surveillance vibratoire sur machines tournantes",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.14",
+    "T1.15",
+    "T6.4"
+   ],
+   "cpPrincipales": [
+    "CP3.1"
+   ],
+   "prerequis": "S3/S5 — Surveillance conditionnelle, vibration, fréquence, relevés et comparaison",
+   "statut": null
+  },
+  {
+   "id": "TP29",
+   "titre": "Maintenance mécanique d’une pompe centrifuge industrielle",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.7",
+    "T1.11",
+    "T6.3",
+    "T6.5"
+   ],
+   "cpPrincipales": [
+    "CP4.5",
+    "CP5.2",
+    "CP5.3"
+   ],
+   "prerequis": "S1/S2 — Roulements, garnitures, fonctionnement centrifuge ; S3 — maintenance mécanique",
+   "statut": null
+  },
+  {
+   "id": "TP30",
+   "titre": "Échange standard d’un composant électrique sur système automatisé",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.7",
+    "T1.11",
+    "T1.14",
+    "T6.3"
+   ],
+   "cpPrincipales": [
+    "CP3.1",
+    "CP4.5",
+    "CP5.2",
+    "CP5.3"
+   ],
+   "prerequis": "S2 — Repérage électrique, composants et schémas ; S3 — échange standard ; S4 — habilitation/consignation",
+   "statut": null
+  },
+  {
+   "id": "TP31",
+   "titre": "Expertise de pièces mécaniques industrielles usagées",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.2",
+    "T1.10",
+    "T1.14",
+    "T6.4"
+   ],
+   "cpPrincipales": [
+    "CP3.1",
+    "CP5.2"
+   ],
+   "prerequis": "S1 — Usure, corrosion, jeux, tolérances et métrologie ; S3 — expertise",
+   "statut": null
+  },
+  {
+   "id": "TP32",
+   "titre": "Préparation et contrôle contradictoire d’un remplacement de moteur asynchrone",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A2",
+    "A6"
+   ],
+   "taches": [
+    "T1.2",
+    "T1.11",
+    "T2.1",
+    "T2.2",
+    "T2.4",
+    "T2.6",
+    "T2.8",
+    "T6.1"
+   ],
+   "cpPrincipales": [
+    "CP1.1",
+    "CP2.2",
+    "CP2.3",
+    "CP3.1",
+    "CP5.2"
+   ],
+   "prerequis": "S1/S2 — Accouplement, moteur asynchrone, plaque signalétique, raccordement ; S3/S4 — remplacement sûr",
+   "statut": null
+  },
+  {
+   "id": "TP33",
+   "titre": "Cartographie Dosicase — quatre sources cachées",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A5"
+   ],
+   "taches": [
+    "T1.14",
+    "T1.15",
+    "T5.2"
+   ],
+   "cpPrincipales": [
+    "CP1.2",
+    "CP1.3",
+    "CP3.1",
+    "CP5.1"
+   ],
+   "prerequis": "S8 — Débit de dose, distance, cartographie ; S6 — repérage spatial ; TP17/18",
+   "statut": null
+  },
+  {
+   "id": "TP34",
+   "titre": "CERMEX : remplacement de chaîne et optimisation ALARA",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A2",
+    "A6"
+   ],
+   "taches": [
+    "T1.4",
+    "T1.7",
+    "T1.9",
+    "T1.13",
+    "T2.7",
+    "T6.1",
+    "T6.2",
+    "T6.3"
+   ],
+   "cpPrincipales": [
+    "CP1.2",
+    "CP1.3",
+    "CP2.1",
+    "CP2.2",
+    "CP4.1",
+    "CP4.3",
+    "CP4.5",
+    "CP5.1",
+    "CP5.2",
+    "CP5.3"
+   ],
+   "prerequis": "S1 — Transmission par chaîne, tension et alignement ; S3 — échange standard ; S6/S8 — ALARA et suivi dose",
+   "statut": null
+  },
+  {
+   "id": "TP35",
+   "titre": "VR Orano — intervention sur vanne VR EN ATTENTE",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.5",
+    "T6.1",
+    "T6.3"
+   ],
+   "cpPrincipales": [
+    "CP1.1",
+    "CP1.2",
+    "CP2.1",
+    "CP2.3",
+    "CP4.3",
+    "CP4.5"
+   ],
+   "prerequis": "S1/S3 — Robinetterie et maintenance ; S6/S8 — préparation nucléaire et radioprotection (à confirmer)",
+   "statut": null,
+   "note": "Aucune validation définitive des liens ni des prérequis sans les scénarios VR originaux."
+  },
+  {
+   "id": "TP36",
+   "titre": "VR Orano — anomalie ou fuite VR EN ATTENTE",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A5"
+   ],
+   "taches": [
+    "T1.2",
+    "T1.7",
+    "T5.1"
+   ],
+   "cpPrincipales": [
+    "CP1.2",
+    "CP3.1",
+    "CP4.3",
+    "CP4.4"
+   ],
+   "prerequis": "S6/S8 — Conduite à tenir face à un écart, alerte, limites d’intervention (à confirmer)",
+   "statut": null,
+   "note": "Aucune validation définitive des liens ni des prérequis sans les scénarios VR originaux."
+  },
+  {
+   "id": "TP37",
+   "titre": "VR EDF — intervention en environnement BR VR EN ATTENTE",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A5",
+    "A6"
+   ],
+   "taches": [
+    "T1.5",
+    "T5.4",
+    "T6.1"
+   ],
+   "cpPrincipales": [
+    "CP1.1",
+    "CP1.2",
+    "CP2.1",
+    "CP2.3",
+    "CP4.3"
+   ],
+   "prerequis": "S6/S7 — Accès et intervention en BR ; S4/S8 — risques et radioprotection (à confirmer)",
+   "statut": null,
+   "note": "Aucune validation définitive des liens ni des prérequis sans les scénarios VR originaux."
+  },
+  {
+   "id": "TP38",
+   "titre": "VR EDF — ronde technique VR EN ATTENTE",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.6",
+    "T1.14",
+    "T6.4"
+   ],
+   "cpPrincipales": [
+    "CP1.2",
+    "CP1.3",
+    "CP3.1",
+    "CP5.1"
+   ],
+   "prerequis": "S6/S8 — Ronde, repérage, lecture des instruments et signalement (à confirmer)",
+   "statut": null,
+   "note": "Aucune validation définitive des liens ni des prérequis sans les scénarios VR originaux."
+  },
+  {
+   "id": "TP39",
+   "titre": "VR — ouverture/fermeture d’un trou d’homme VR EN ATTENTE",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.8",
+    "T1.11",
+    "T6.3"
+   ],
+   "cpPrincipales": [
+    "CP1.2",
+    "CP4.5",
+    "CP5.2",
+    "CP5.3"
+   ],
+   "prerequis": "S1/S3 — Assemblage boulonné et étanchéité ; S6/S8 — procédures et risques (à confirmer)",
+   "statut": null,
+   "note": "Aucune validation définitive des liens ni des prérequis sans les scénarios VR originaux."
+  },
+  {
+   "id": "TP40",
+   "titre": "Évaluation individuelle de synthèse (proche CCF)",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A6"
+   ],
+   "taches": [
+    "T1.10",
+    "T1.11",
+    "T6.1",
+    "T6.3"
+   ],
+   "cpPrincipales": [
+    "CP1.1",
+    "CP2.3",
+    "CP3.1",
+    "CP4.5",
+    "CP5.2",
+    "CP5.3"
+   ],
+   "prerequis": "S1 à S5 selon sujet ; S6/S8 si scénario nucléaire ; maîtrise des gestes déjà enseignés",
+   "statut": null,
+   "note": "Rattachements à ajuster au sujet attribué."
+  },
+  {
+   "id": "TP41",
+   "titre": "Chantier de démantèlement réversible d’un ancien système industriel",
+   "annee": "Tle",
+   "duree": "4 h",
+   "activites": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A6"
+   ],
+   "taches": [
+    "T1.16",
+    "T2.2",
+    "T2.6",
+    "T3.1",
+    "T4.2",
+    "T6.1"
+   ],
+   "cpPrincipales": [
+    "CP2.1",
+    "CP2.2",
+    "CP3.1",
+    "CP4.1",
+    "CP4.2",
+    "CP4.3",
+    "CP5.2"
+   ],
+   "prerequis": "S1 — Assemblages, masses, stabilité ; S3/S4 — dépose et maîtrise des énergies ; S5/S6 — inventaire, tri et traçabilité",
+   "statut": null,
+   "note": "A4 limitée au déplacement de charges si effectivement réalisé ; aucune découpe. A3 : tri conventionnel ; évacuation à vérifier."
+  }
+ ]
+}

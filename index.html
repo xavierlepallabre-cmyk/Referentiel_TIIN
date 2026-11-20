@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#16324f">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 <header class="barre">
@@ -22,7 +22,7 @@
   <nav class="onglets" role="tablist">
     <button role="tab" data-vue="seance" aria-selected="true">Séance atelier</button>
     <button role="tab" data-vue="cibler">Cibler</button>
-    <button role="tab" data-vue="tp">Idées de TP</button>
+    <button role="tab" data-vue="tp">TP</button>
     <button role="tab" data-vue="savoirs">Savoirs</button>
     <button role="tab" data-vue="fiches">Tâches &amp; compétences</button>
     <button role="tab" data-vue="matrices">Matrices</button>
@@ -105,19 +105,34 @@
       </div>
       <ol id="liste-cibler" class="classement"></ol>
     </section>
+    <section id="bloc-cibler-mestp" class="panneau" hidden>
+      <div class="panneau-tete"><h2>Mes TP qui travaillent ces compétences</h2><span class="aide">Classés par compétences principales ciblées</span></div>
+      <div id="liste-cibler-mestp"></div>
+    </section>
     <section id="bloc-cibler-tp" class="panneau" hidden>
-      <div class="panneau-tete"><h2>Idées de TP qui travaillent ces compétences</h2></div>
+      <div class="panneau-tete"><h2>Idées complémentaires</h2></div>
       <div id="liste-cibler-tp"></div>
     </section>
   </section>
 
   <!-- ======================= IDÉES DE TP ======================= -->
   <section id="vue-tp" class="vue">
+    <div class="outils">
+      <div class="bascule" role="group" id="bascule-tp">
+        <button data-banque="mes" class="actif">Mes TP</button>
+        <button data-banque="idees">Idées complémentaires</button>
+      </div>
+    </div>
     <p id="tp-intro" class="avertissement"></p>
+    <details id="bloc-couverture-mes" class="panneau">
+      <summary><b>Couverture du référentiel par mon catalogue</b> <span class="aide">— tâches et compétences jamais visées</span></summary>
+      <div id="couverture-mes" style="margin-top:10px"></div>
+    </details>
     <div class="outils">
       <input id="recherche-tp" type="search" placeholder="Rechercher un TP (ex. : sas, vanne, déchets, levage…)">
       <select id="filtre-tp-cp"><option value="">Toutes les compétences</option></select>
       <select id="filtre-tp-act"><option value="">Toutes les activités</option></select>
+      <select id="filtre-tp-annee"><option value="">Les deux années</option><option value="1re">Première année</option><option value="Tle">Terminale</option></select>
     </div>
     <div id="liste-tp"></div>
   </section>
@@ -185,7 +200,7 @@
 <!-- Vue imprimable de la séance -->
 <div id="impression" aria-hidden="true"></div>
 
-<script src="data/referentiel.js?v=4"></script>
-<script src="app.js?v=4"></script>
+<script src="data/referentiel.js?v=5"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>

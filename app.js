@@ -403,7 +403,8 @@ function ficheTache(t) {
         <td data-col="Données">${commun ? '<span class="aide">Descriptif commun à 7 tâches (voir la fiche CP4.5)</span>' : ul(tc.donnees)}</td>
         <td data-col="Indicateurs de performance">${commun ? '<span class="aide">Voir la fiche CP4.5</span>' : ul(tc.indicateurs)}</td></tr>`;
     }).join('')}</tbody></table>
-    ${(() => { const l = TPS.filter(tp => tp.taches.includes(t.id)); return l.length ? `<p class="aide">Idées de TP : ${l.map(tp => `<span class="puce lien" data-aller="tp:${tp.id}" title="${esc(tp.titre)}">${tp.id}</span>`).join(' ')}</p>` : ''; })()}
+    ${(() => { const m = MES.filter(tp => tp.taches.includes(t.id)), l = TPS.filter(tp => tp.taches.includes(t.id));
+      return `<p class="aide">Mes TP : ${m.length ? m.map(tp => `<span class="puce lien" data-aller="montp:${tp.id}" title="${esc(tp.titre)}">${tp.id}</span>`).join(' ') : '<b>aucun</b>'}${l.length ? ` · Idées : ${l.map(tp => `<span class="puce lien" data-aller="tp:${tp.id}" title="${esc(tp.titre)}">${tp.id}</span>`).join(' ')}` : ''}</p>`; })()}
     <p class="aide">Ajouter à la séance : <button class="discret" data-ajout="${t.id}">${etat.coches.has(t.id) ? '✓ déjà cochée' : '+ cocher cette tâche'}</button></p>
   </article>`;
 }
@@ -454,17 +455,12 @@ function aller(cible) {
     const d = $('#dom-' + id); d.open = true; setTimeout(() => d.scrollIntoView({ behavior: 'smooth' }), 30);
     return;
   }
-  if (type === 'tp') {
-    ouvrirVue('tp'); $('#recherche-tp').value = ''; $('#filtre-tp-cp').value = ''; $('#filtre-tp-act').value = ''; rendreTP();
-    const el = $('#fiche-' + id); el.open = true;
-    setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 30); el.classList.add('surligne'); setTimeout(() => el.classList.remove('surligne'), 1800);
-    return;
-  }
+  if (type === 'tp' || type === 'montp') { ouvrirTP(id); return; }
   ouvrirVue('fiches');
   etat.fiche = type === 'tache' ? 'taches' : type === 'cp' ? 'competences' : 'activites';
   $$('.bascule button').forEach(x => x.classList.toggle('actif', x.dataset.fiche === etat.fiche));
   $('#recherche-fiches').value = ''; rendreFiches();
-  const el = $('#fiche-' + id.replace('.', '-')) || $('#fiche-' + id);
+  const el = document.getElementById('fiche-' + id.replace('.', '-')) || document.getElementById('fiche-' + id);
   if (el) { setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 30); el.classList.add('surligne'); setTimeout(() => el.classList.remove('surligne'), 1800); }
 }
 document.addEventListener('click', e => {
@@ -494,12 +490,16 @@ function rendreMatrices() {
   $('#matrice-cs').innerHTML = g + '</tbody>';
 }
 
-/* ============================================================ IDÉES DE TP */
-const TPS = R.tp.tp;
+/* ===================================================== MES TP + IDÉES DE TP */
+const TPS = R.tp.tp;                 // idées complémentaires (IDEE01…)
+const MES = R.mesTp.tp;              // catalogue de Xavier (TP01…TP41)
+const TOUS_TP = new Map([...MES, ...TPS].map(t => [t.id, t]));
 const cpsDuTP = tp => [...new Set(tp.taches.flatMap(t => TACHES.get(t).competences.map(x => x.cp)))].sort(triCode);
 const puceTache = t => `<span class="puce lien" data-aller="tache:${t}" title="${esc(TACHES.get(t).titre)}">${t}</span>`;
+const puceCP = (c, cls = '', titre = '') => `<span class="puce ${cls}" title="${esc(titre || COMPS.get(c).libelle)}">${c}</span>`;
+etat.banque = 'mes';
 
-function carteTP(tp, ouvert = false, cibles = null) {
+function carteIdee(tp, ouvert = false, cibles = null) {
   const cps = cpsDuTP(tp);
   const li = a => a.map(x => `<li>${esc(x)}</li>`).join('');
   return `<details class="tp fiche panneau" id="fiche-${tp.id}" ${ouvert ? 'open' : ''}>
@@ -507,7 +507,7 @@ function carteTP(tp, ouvert = false, cibles = null) {
       <div class="entete-fiche"><span class="code">${tp.id}</span><h3>${esc(tp.titre)}</h3><span class="meta">${esc(tp.duree)} · ${esc(tp.effectif)}</span></div>
       <div class="contexte">${esc(tp.contexte)}</div>
       <div class="liens"><span class="aide">Tâches :</span>${tp.taches.map(puceTache).join('')}</div>
-      <div class="liens"><span class="aide">Compétences :</span>${cps.map(c => `<span class="puce ${cibles && cibles.has(c) ? 'cible-ok' : ''}" title="${esc(COMPS.get(c).libelle)}">${c}</span>`).join('')}</div>
+      <div class="liens"><span class="aide">Compétences :</span>${cps.map(c => puceCP(c, cibles && cibles.has(c) ? 'cible-ok' : '')).join('')}</div>
       <div class="tp-actions"><button class="primaire mini" data-tp-seance="${tp.id}">Charger ses tâches dans la séance</button><span class="plus">Voir le déroulé ▾</span></div>
     </summary>
     <div class="tp-corps">
@@ -520,22 +520,84 @@ function carteTP(tp, ouvert = false, cibles = null) {
   </details>`;
 }
 
-function rendreTP() {
-  const motifs = norm($('#recherche-tp').value.trim()).split(/\s+/).filter(Boolean);
-  const cp = $('#filtre-tp-cp').value, act = $('#filtre-tp-act').value;
-  const liste = TPS.filter(tp =>
-    (!motifs.length || motifs.every(m => norm(JSON.stringify(tp)).includes(m))) &&
-    (!cp || cpsDuTP(tp).includes(cp)) &&
-    (!act || tp.taches.some(t => TACHES.get(t).activite === act)));
-  $('#liste-tp').innerHTML = liste.map(tp => carteTP(tp, false, cp ? new Set([cp]) : null)).join('') || '<p class="vide">Aucun TP ne correspond.</p>';
+function carteMonTP(tp, cibles = null) {
+  const ded = cpsDuTP(tp);
+  const autres = ded.filter(c => !tp.cpPrincipales.includes(c));
+  const prereq = esc(tp.prerequis).replace(/\b(S[1-8])\b/g, '<span class="puce lien" data-aller="savoir:$1">$1</span>')
+    .replace(/\b(TP\d\d)\b/g, m => TOUS_TP.has(m) ? `<span class="puce lien" data-aller="montp:${m}">${m}</span>` : m);
+  return `<article class="tp fiche panneau montp" id="fiche-mes-${tp.id}">
+    <div class="entete-fiche"><span class="code">${tp.id}</span><h3>${esc(tp.titre)}</h3>
+      <span class="meta">${tp.annee === '1re' ? 'Première année' : 'Terminale'} · ${esc(tp.duree)} · ${tp.activites.join(', ')}</span>
+      ${tp.statut ? `<span class="statut">${esc(tp.statut)}</span>` : ''}</div>
+    <div class="liens"><span class="aide">Tâches :</span>${tp.taches.map(puceTache).join('')}</div>
+    <div class="liens"><span class="aide">Compétences principales :</span>${tp.cpPrincipales.map(c => ded.includes(c)
+      ? puceCP(c, cibles && cibles.has(c) ? 'cible-ok' : 'principale')
+      : puceCP(c, (cibles && cibles.has(c) ? 'cible-ok ' : 'principale ') + 'hors', COMPS.get(c).libelle + ' — non mobilisée par ces tâches dans la matrice du référentiel')).join('')}</div>
+    ${autres.length ? `<div class="liens"><span class="aide">Aussi liées à ces tâches :</span>${autres.map(c => puceCP(c, cibles && cibles.has(c) ? 'cible-ok' : 'secondaire')).join('')}</div>` : ''}
+    <div class="liens prereq"><span class="aide">Prérequis :</span><span>${prereq}</span></div>
+    ${tp.note ? `<p class="note-tp">${esc(tp.note)}</p>` : ''}
+    <div class="tp-actions"><button class="primaire mini" data-tp-seance="${tp.id}">Charger ses tâches dans la séance</button></div>
+  </article>`;
 }
-$('#tp-intro').textContent = R.tp.intro + ' Chaque TP est relié aux tâches du référentiel : les compétences et savoirs en découlent.';
+
+function rendreCouvertureMes() {
+  const nT = new Map(R.taches.map(t => [t.id, []])), nC = new Map(R.competences.map(c => [c.id, []]));
+  MES.forEach(tp => { tp.taches.forEach(t => nT.get(t).push(tp.id)); tp.cpPrincipales.forEach(c => nC.get(c)?.push(tp.id)); });
+  const max = Math.max(...[...nC.values()].map(v => v.length), 1), maxT = Math.max(...[...nT.values()].map(v => v.length), 1);
+  const trous = R.taches.filter(t => !nT.get(t.id).length);
+  const idees = t => TPS.filter(i => i.taches.includes(t)).map(i => `<span class="puce lien" data-aller="tp:${i.id}" title="${esc(i.titre)}">${i.id}</span>`).join(' ');
+  $('#couverture-mes').innerHTML = `
+    ${trous.length ? `<div class="trous"><b>${trous.length} tâche(s) du référentiel ne sont visées par aucun de tes TP :</b>
+      ${trous.map(t => `<div class="couv zero"><span class="puce lien" data-aller="tache:${t.id}">${t.id}</span><span class="lib">${esc(t.titre)}</span><span></span><span class="aide">idées : ${idees(t.id) || '—'}</span></div>`).join('')}</div>` : '<p>Toutes les tâches du référentiel sont visées par au moins un TP.</p>'}
+    <div class="couv-colonnes" style="margin-top:12px">
+      <div><h3>Compétences principales (nb de TP)</h3>${R.competences.map(c => { const l = nC.get(c.id); return `<div class="couv ${l.length ? '' : 'zero'}"><span class="puce lien" data-aller="cp:${c.id}">${c.id}</span><span class="lib">${jauge(l.length, max, '')}<span class="aide">${esc(c.libelle)}</span></span><span class="n">${l.length}</span><button class="discret mini" data-cibler="${c.id}">cibler</button></div>`; }).join('')}</div>
+      <div><h3>Tâches (nb de TP)</h3>${R.taches.map(t => { const l = nT.get(t.id); return `<div class="couv ${l.length ? '' : 'zero'}"><span class="puce lien" data-aller="tache:${t.id}">${t.id}</span><span class="lib">${jauge(l.length, maxT, '')}<span class="aide" title="${l.join(', ')}">${esc(t.titre)}</span></span><span class="n">${l.length}</span><span></span></div>`; }).join('')}</div>
+    </div>`;
+}
+
+function rendreTP() {
+  const mes = etat.banque === 'mes';
+  $$('#bascule-tp button').forEach(b => b.classList.toggle('actif', b.dataset.banque === etat.banque));
+  $('#tp-intro').textContent = mes
+    ? R.mesTp.avertissement
+    : R.tp.intro + ' Chaque idée est reliée aux tâches du référentiel : les compétences et savoirs en découlent.';
+  $('#filtre-tp-annee').hidden = !mes;
+  $('#bloc-couverture-mes').hidden = !mes;
+  const motifs = norm($('#recherche-tp').value.trim()).split(/\s+/).filter(Boolean);
+  const cp = $('#filtre-tp-cp').value, act = $('#filtre-tp-act').value, an = $('#filtre-tp-annee').value;
+  const liste = (mes ? MES : TPS).filter(tp =>
+    (!motifs.length || motifs.every(m => norm(JSON.stringify(tp)).includes(m))) &&
+    (!cp || (mes ? tp.cpPrincipales.includes(cp) : cpsDuTP(tp).includes(cp))) &&
+    (!act || tp.taches.some(t => TACHES.get(t).activite === act)) &&
+    (!mes || !an || tp.annee === an));
+  const cib = cp ? new Set([cp]) : null;
+  let html = '';
+  if (mes) {
+    for (const a of ['1re', 'Tle']) {
+      const l = liste.filter(t => t.annee === a); if (!l.length) continue;
+      html += `<h2 class="titre-annee">${a === '1re' ? 'Première année' : 'Terminale'} <span class="badge">${l.length}</span></h2>` + l.map(t => carteMonTP(t, cib)).join('');
+    }
+  } else html = liste.map(tp => carteIdee(tp, false, cib)).join('');
+  $('#liste-tp').innerHTML = html || '<p class="vide">Aucun TP ne correspond.</p>';
+}
 $('#filtre-tp-cp').innerHTML += R.competences.map(c => `<option value="${c.id}">${c.id} — ${esc(c.libelle)}</option>`).join('');
 $('#filtre-tp-act').innerHTML += R.activites.map(a => `<option value="${a.id}">${a.id} — ${esc(a.titre)}</option>`).join('');
-['#recherche-tp', '#filtre-tp-cp', '#filtre-tp-act'].forEach(s => $(s).addEventListener('input', rendreTP));
+['#recherche-tp', '#filtre-tp-cp', '#filtre-tp-act', '#filtre-tp-annee'].forEach(s => $(s).addEventListener('input', rendreTP));
+$('#bascule-tp').addEventListener('click', e => { const b = e.target.closest('[data-banque]'); if (!b) return; etat.banque = b.dataset.banque; rendreTP(); });
+$('#bascule-tp [data-banque=mes]').textContent = `Mes TP (${MES.length})`;
+$('#bascule-tp [data-banque=idees]').textContent = `Idées complémentaires (${TPS.length})`;
+
+function ouvrirTP(id) {
+  const mes = !id.startsWith('IDEE');
+  etat.banque = mes ? 'mes' : 'idees';
+  ouvrirVue('tp'); ['#recherche-tp', '#filtre-tp-cp', '#filtre-tp-act', '#filtre-tp-annee'].forEach(s => $(s).value = ''); rendreTP();
+  const el = $(mes ? '#fiche-mes-' + id : '#fiche-' + id); if (!el) return;
+  if (!mes) el.open = true;
+  setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 30); el.classList.add('surligne'); setTimeout(() => el.classList.remove('surligne'), 1800);
+}
 
 function chargerTP(id) {
-  const tp = TPS.find(x => x.id === id);
+  const tp = TOUS_TP.get(id);
   if (etat.coches.size && !confirm('Remplacer les tâches actuellement cochées dans la séance atelier ?')) return;
   chargerSeance({ titre: `${tp.id} · ${tp.titre}`, date: aujourdhui(), taches: tp.taches });
   ouvrirVue('seance'); toast('Tâches du TP chargées : ajustez si besoin puis enregistrez.');
@@ -545,17 +607,29 @@ document.addEventListener('click', e => {
   e.preventDefault(); chargerTP(b.dataset.tpSeance);
 });
 
+const ligneTPmini = (tp, cps, n, total, via = '') => `<div class="tp-mini">
+  <div><b style="color:var(--accent-2)">${tp.id}</b> ${esc(tp.titre)} <span class="aide">· ${tp.annee ? (tp.annee === '1re' ? '1re année' : 'Terminale') + ' · ' : ''}${esc(tp.duree)}${tp.statut ? ' · ' + esc(tp.statut) : ''}</span><br>
+  <span class="liens" style="display:inline-flex;gap:4px;flex-wrap:wrap">${cps.map(c => `<span class="puce cible-ok">${c}</span>`).join('')}${via ? `<span class="aide">${via}</span>` : ''}</span></div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end"><span class="aide">${n}/${total}</span>
+  <button class="mini" data-aller="${tp.id.startsWith('IDEE') ? 'tp' : 'montp'}:${tp.id}">Voir</button><button class="mini" data-tp-seance="${tp.id}">Charger</button></div></div>`;
+
 function rendreCiblerTP(cibles) {
   const set = new Set(cibles);
-  const props = TPS.map(tp => ({ tp, n: cpsDuTP(tp).filter(c => set.has(c)).length })).filter(x => x.n)
-    .sort((a, b) => b.n - a.n || triCode(a.tp.id, b.tp.id));
   $('#bloc-cibler-tp').hidden = !cibles.length;
-  $('#liste-cibler-tp').innerHTML = props.length ? props.map(({ tp, n }) => `<div class="tp-mini">
-      <div><b style="color:var(--accent-2)">${tp.id}</b> ${esc(tp.titre)} <span class="aide">· ${esc(tp.duree)}</span><br>
-      <span class="liens" style="display:inline-flex;gap:4px;flex-wrap:wrap">${cpsDuTP(tp).filter(c => set.has(c)).map(c => `<span class="puce cible-ok">${c}</span>`).join('')}</span></div>
-      <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end"><span class="aide">${n}/${cibles.length}</span>
-      <button class="mini" data-aller="tp:${tp.id}">Voir</button><button class="mini" data-tp-seance="${tp.id}">Charger</button></div></div>`).join('')
-    : '<p class="aide">Aucun TP de la banque ne mobilise ces compétences.</p>';
+  $('#bloc-cibler-mestp').hidden = !cibles.length;
+  if (!cibles.length) return;
+  // Mes TP : d'abord les compétences principales, puis celles liées à leurs tâches
+  const mes = MES.map(tp => {
+    const p = tp.cpPrincipales.filter(c => set.has(c)), d = cpsDuTP(tp).filter(c => set.has(c) && !p.includes(c));
+    return { tp, p, d };
+  }).filter(x => x.p.length || x.d.length).sort((a, b) => b.p.length - a.p.length || b.d.length - a.d.length || triCode(a.tp.id, b.tp.id));
+  $('#liste-cibler-mestp').innerHTML = mes.length ? mes.map(({ tp, p, d }) => ligneTPmini(tp, p.length ? p : d, p.length || d.length, cibles.length,
+      p.length ? (d.length ? `+ ${d.join(', ')} via ses tâches` : '') : 'via ses tâches (pas en compétence principale)')).join('')
+    : '<p class="aide">Aucun de tes TP ne mobilise ces compétences : voir les idées ci-dessous.</p>';
+  const props = TPS.map(tp => ({ tp, c: cpsDuTP(tp).filter(c => set.has(c)) })).filter(x => x.c.length)
+    .sort((a, b) => b.c.length - a.c.length || triCode(a.tp.id, b.tp.id));
+  $('#liste-cibler-tp').innerHTML = props.length ? props.map(({ tp, c }) => ligneTPmini(tp, c, c.length, cibles.length)).join('')
+    : '<p class="aide">Aucune idée de TP ne mobilise ces compétences.</p>';
 }
 
 /* ================================================================ CIBLER */
@@ -716,7 +790,7 @@ $('#fichier-import').addEventListener('change', async e => {
   if (m) chargerSeance({ titre: br?.titre || '', date: aujourdhui(), taches: m[1].split(',') });
   else if (br) chargerSeance(br);
   else chargerSeance({ titre: '', date: aujourdhui(), taches: [] });
-  rendreSavoirs(); rendreFiches(); rendreMatrices(); rendreChoixCibles(); rendreTP();
+  rendreSavoirs(); rendreFiches(); rendreMatrices(); rendreChoixCibles(); rendreTP(); rendreCouvertureMes();
   if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(() => {});
 })();
 })();

@@ -294,3 +294,17 @@ select { font: inherit; color: inherit; border: 1px solid var(--bord); backgroun
 .tp-mini { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--bord); }
 .tp-mini:first-child { border-top: 0; }
 @media (max-width: 700px) { .tp-corps { grid-template-columns: 1fr; } }
+
+/* ---------- Mes TP ---------- */
+.titre-annee { margin: 18px 0 10px; display: flex; gap: 8px; align-items: center; }
+.montp .liens { margin-top: 6px; }
+.puce.principale { background: var(--accent-clair); border-color: var(--accent-2); font-weight: 600; }
+.puce.secondaire { opacity: .75; }
+.puce.hors { border-style: dashed; }
+.puce.hors::after { content: " ⚠"; }
+.prereq > span:last-child { font-size: .88rem; }
+.note-tp { font-size: .85rem; font-style: italic; color: var(--texte-2); margin: 8px 0 0; }
+.statut { background: var(--n3); color: var(--n3-t); border-radius: 99px; padding: 1px 10px; font-size: .78rem; font-weight: 600; }
+#bloc-couverture-mes > summary { cursor: pointer; }
+.trous { background: var(--surface-2); border-radius: 8px; padding: 10px 12px; }
+.trous .couv { grid-template-columns: 60px 1fr 0 auto; }

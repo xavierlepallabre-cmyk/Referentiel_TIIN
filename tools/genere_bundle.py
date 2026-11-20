@@ -12,7 +12,8 @@ DATA = Path(__file__).resolve().parent.parent / "data"
 ac = json.loads((DATA / "activites_competences.json").read_text(encoding="utf-8"))
 sv = json.loads((DATA / "savoirs.json").read_text(encoding="utf-8"))
 tp = json.loads((DATA / "tp.json").read_text(encoding="utf-8"))
-bundle = {**ac, "savoirs": sv, "tp": tp}
+mes = json.loads((DATA / "mes_tp.json").read_text(encoding="utf-8"))
+bundle = {**ac, "savoirs": sv, "tp": tp, "mesTp": mes}
 js = "// Fichier généré par tools/genere_bundle.py — ne pas modifier à la main.\n"
 js += "window.REFERENTIEL = " + json.dumps(bundle, ensure_ascii=False, separators=(",", ":")) + ";\n"
 (DATA / "referentiel.js").write_text(js, encoding="utf-8")

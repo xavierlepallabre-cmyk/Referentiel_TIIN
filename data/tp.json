@@ -2,7 +2,7 @@
  "intro": "Idées de TP pour un atelier de maintenance de lycée professionnel équipé d'un matériel de simulation radiologique. Les sources et contaminations sont toujours simulées.",
  "tp": [
   {
-   "id": "TP01",
+   "id": "IDEE01",
    "titre": "Préparer une intervention en zone contrôlée simulée",
    "contexte": "Le chef d'équipe confie au binôme le dossier d'intervention pour le remplacement d'un clapet sur une ligne située en zone contrôlée (zone délimitée et balisée dans l'atelier). Avant d'entrer, il faut s'approprier le dossier, repérer les risques et préparer le matériel.",
    "duree": "3 h",
@@ -43,7 +43,7 @@
    "securite": "Aucune source réelle : débits de dose fictifs portés sur la cartographie."
   },
   {
-   "id": "TP02",
+   "id": "IDEE02",
    "titre": "Accès en zone : habillage, déshabillage et franchissement de zone",
    "contexte": "Avant toute intervention en zone contrôlée, l'intervenant doit s'équiper selon le niveau de zone et ressortir sans propager de contamination.",
    "duree": "2 h",
@@ -81,7 +81,7 @@
    "securite": "Traceur non toxique ; contrôler les allergies au latex."
   },
   {
-   "id": "TP03",
+   "id": "IDEE03",
    "titre": "Monter un sas de confinement et sa ventilation",
    "contexte": "Pour ouvrir un circuit potentiellement contaminé, on construit un sas vinyle maintenu en dépression par un extracteur filtrant.",
    "duree": "4 h",
@@ -115,13 +115,13 @@
     "Démontage sans dispersion (règle du « repli »)"
    ],
    "variantes": [
-    "Sas sur une vanne réelle de l'atelier pour enchaîner avec le TP08",
+    "Sas sur une vanne réelle de l'atelier pour enchaîner avec l’idée IDEE08",
     "Panne d'extracteur introduite en cours de TP"
    ],
    "securite": "Travail en hauteur limité (escabeau conforme) ; outils de coupe pour le vinyle."
   },
   {
-   "id": "TP04",
+   "id": "IDEE04",
    "titre": "Réaliser une cartographie radiologique d'un local",
    "contexte": "Avant un chantier, le local doit être cartographié : mesures de débit de dose en différents points, report sur plan, identification des points chauds.",
    "duree": "3 h",
@@ -161,7 +161,7 @@
    "securite": "Uniquement des sources simulées."
   },
   {
-   "id": "TP05",
+   "id": "IDEE05",
    "titre": "Contrôle de non-contamination du matériel en sortie de zone",
    "contexte": "Les outils et pièces sortis de zone contrôlée doivent être contrôlés. Un objet contaminé ne sort pas : il est décontaminé ou traité en déchet.",
    "duree": "2 h",
@@ -199,7 +199,7 @@
    "securite": "Traceur non toxique."
   },
   {
-   "id": "TP06",
+   "id": "IDEE06",
    "titre": "Décontaminer un équipement",
    "contexte": "Une pièce mécanique (carter, vanne) ressort contaminée : il faut la décontaminer en choisissant une méthode adaptée, puis contrôler le résultat.",
    "duree": "3 h",
@@ -238,7 +238,7 @@
    "securite": "EPI chimiques si solvant ; ventilation."
   },
   {
-   "id": "TP07",
+   "id": "IDEE07",
    "titre": "Mettre en place des protections biologiques (ALARA)",
    "contexte": "Une intervention doit se faire près d'une source (simulée). On cherche à réduire la dose : temps, distance, écrans.",
    "duree": "3 h",
@@ -277,7 +277,7 @@
    "securite": "Manutention des écrans : charges et postures."
   },
   {
-   "id": "TP08",
+   "id": "IDEE08",
    "titre": "Remplacer le joint ou le clapet d'une vanne en zone simulée",
    "contexte": "Intervention de maintenance corrective sur une vanne de l'atelier, traitée comme si elle était en zone contrôlée : préparation, consignation, démontage, remplacement, essai, repli.",
    "duree": "4 h",
@@ -287,7 +287,7 @@
     "Pièces de rechange (joint, clapet, presse-étoupe)",
     "Outillage, clés dynamométriques",
     "Gamme de démontage / remontage, fiche de consignation",
-    "Tenue et balisage de zone (comme TP02)"
+    "Tenue et balisage de zone (comme l’idée IDEE02)"
    ],
    "deroule": [
     "Préparation : gamme, pièces, outillage, analyse des risques",
@@ -319,7 +319,7 @@
    "securite": "Consignation des énergies ; fluide sous pression."
   },
   {
-   "id": "TP09",
+   "id": "IDEE09",
    "titre": "Remplacer un composant lourd : moto-pompe ou motoréducteur",
    "contexte": "Échange standard d'un ensemble moto-pompe : dépose, levage, remplacement, alignement, remise en service.",
    "duree": "6 h (2 séances)",
@@ -358,7 +358,7 @@
    "securite": "Levage : zone balisée, personne sous charge interdite ; consignation électrique."
   },
   {
-   "id": "TP10",
+   "id": "IDEE10",
    "titre": "Réaliser une gamme de maintenance préventive",
    "contexte": "Le plan de maintenance prévoit une visite préventive systématique d'un équipement (convoyeur, pompe, compresseur).",
    "duree": "3 h",
@@ -395,7 +395,7 @@
    "securite": "Consignation avant intervention sur organes mobiles."
   },
   {
-   "id": "TP11",
+   "id": "IDEE11",
    "titre": "Ronde de surveillance et relevé d'écarts",
    "contexte": "Une ronde sur l'installation (ensemble des équipements de l'atelier) permet de détecter les dérives avant la panne.",
    "duree": "2 h",
@@ -431,7 +431,7 @@
    "securite": "Ne pas intervenir sur machine en marche ; protections en place."
   },
   {
-   "id": "TP12",
+   "id": "IDEE12",
    "titre": "Trier et conditionner les déchets d'un chantier",
    "contexte": "Fin de chantier en zone : les déchets produits doivent être triés selon le zonage déchets, conditionnés, étiquetés et évacués avec leur traçabilité.",
    "duree": "2 h",
@@ -467,7 +467,7 @@
    "securite": "Objets coupants : gants adaptés."
   },
   {
-   "id": "TP13",
+   "id": "IDEE13",
    "titre": "Conduire une installation automatisée de traitement de déchets",
    "contexte": "Un système automatisé de l'atelier (convoyeur de tri, presse, poste de conditionnement) joue le rôle d'une installation de compactage ou de conditionnement de déchets.",
    "duree": "3 h",
@@ -503,7 +503,7 @@
    "securite": "Respect des protecteurs ; arrêt d'urgence testé."
   },
   {
-   "id": "TP14",
+   "id": "IDEE14",
    "titre": "Découpe d'une structure en démantèlement simulé",
    "contexte": "Démantèlement d'une tuyauterie ou d'un châssis métallique en zone : découpe à froid sous confinement, en maîtrisant la production de déchets.",
    "duree": "4 h",
@@ -511,7 +511,7 @@
    "materiel": [
     "Tuyauteries ou profilés de récupération",
     "Scie sabre, scie à ruban portative, coupe-tube (découpe à froid)",
-    "Sas ou confinement (TP03), aspiration",
+    "Sas ou confinement (idée IDEE03), aspiration",
     "Conteneurs de déchets ; marquage au traceur de la zone « contaminée »"
    ],
    "deroule": [
@@ -540,7 +540,7 @@
    "securite": "EPI (lunettes, gants anti-coupure, protection auditive) ; pas de découpe à chaud sans permis de feu."
   },
   {
-   "id": "TP15",
+   "id": "IDEE15",
    "titre": "Manutentionner et lever un colis ou un fût",
    "contexte": "Déplacement d'un fût de déchets et d'un équipement vers une aire d'entreposage, avec moyens manuels et de levage.",
    "duree": "2 h",
@@ -575,13 +575,13 @@
    "securite": "Personne sous charge interdite ; chaussures de sécurité."
   },
   {
-   "id": "TP16",
+   "id": "IDEE16",
    "titre": "Gérer un incident en zone",
    "contexte": "Pendant une intervention simulée, un incident survient : alarme du dosimètre, contamination d'un intervenant ou malaise. L'équipe doit réagir, se mettre en sécurité et rendre compte.",
    "duree": "2 h",
    "effectif": "équipes de 3-4",
    "materiel": [
-    "Chantier école en cours (TP08 ou TP03)",
+    "Chantier école en cours (idée IDEE08 ou IDEE03)",
     "Dosimètre ou simulateur déclenchant une alarme",
     "Traceur pour une contamination de personne",
     "Fiches réflexes, plan d'urgence interne fictif, moyens d'alerte"
@@ -613,7 +613,7 @@
    "securite": "Scénario annoncé en début de séance comme exercice."
   },
   {
-   "id": "TP17",
+   "id": "IDEE17",
    "titre": "Suivre son chantier et rendre compte",
    "contexte": "Sur un chantier de plusieurs séances, l'élève tient le rôle de l'intervenant qui suit l'avancement, gère les aléas et rend compte au chef d'équipe et au client.",
    "duree": "fil rouge sur 2-3 séances",
@@ -621,7 +621,7 @@
    "materiel": [
     "Planning de chantier, indicateurs (avancement, délais, coûts, dose)",
     "Modèles : fiche d'écart, compte rendu, fiche de remarques client",
-    "Un chantier support (TP08, TP09 ou TP14)"
+    "Un chantier support (idées IDEE08, IDEE09 ou IDEE14)"
    ],
    "deroule": [
     "Début de séance : point avancement par rapport au planning",
@@ -650,7 +650,7 @@
    "securite": "—"
   },
   {
-   "id": "TP18",
+   "id": "IDEE18",
    "titre": "Retour d'expérience et proposition d'amélioration",
    "contexte": "Après un chantier école, l'équipe analyse ce qui s'est passé (vidéo, relevés de dose, temps, déchets) pour proposer des améliorations.",
    "duree": "2 h",
@@ -683,7 +683,7 @@
    "securite": "—"
   },
   {
-   "id": "TP19",
+   "id": "IDEE19",
    "titre": "Suivi dosimétrique individuel",
    "contexte": "Chaque intervenant suit sa dose : relevé du dosimètre opérationnel, comparaison au prévisionnel, réaction en cas de dépassement.",
    "duree": "1 h 30 (adossé à un autre TP)",
@@ -716,7 +716,7 @@
    "securite": "Doses fictives."
   },
   {
-   "id": "TP20",
+   "id": "IDEE20",
    "titre": "Vérifier un appareil de mesure avant usage",
    "contexte": "On n'utilise pas un appareil sans vérifier qu'il est valide et qu'il fonctionne : radiamètre, contaminamètre, mais aussi multimètre ou manomètre.",
    "duree": "1 h 30",
@@ -751,7 +751,7 @@
    "securite": "—"
   },
   {
-   "id": "TP21",
+   "id": "IDEE21",
    "titre": "Logistique et approvisionnement du chantier",
    "contexte": "Le chantier commence dans deux jours : il faut rassembler et vérifier tout le matériel, sortir les pièces du magasin et préparer l'aire de chantier.",
    "duree": "2 h",
